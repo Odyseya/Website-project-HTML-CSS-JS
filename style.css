@@ -67,3 +67,104 @@ select {
 .center {
 	text-align: center;
 }
+
+/* --- GENERAL STYLES */
+
+/* makes scroll work smooth with elements */
+html {
+	scroll-behavior: smooth;
+	background-color: var(--BGCOLOR);
+}
+
+body {
+	background-color: var(--BGCOLOR);
+	color: var(--FONT-COLOR);
+
+	min-height: 100vh; /* Ensure full viewport height for vertical centering */
+	max-width: 90rem;
+	min-width: 320px; /* needed? */
+
+	display: flex;
+	flex-direction: column; /* sets content from top to bottom on mobile */
+
+	font: 1.25rem var(--FF);
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal; /* 1.2 to 1.45em */
+
+	padding: var(--PADDING-LEFT-RIGHT);
+	padding-top: 4.375em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--HEADERS-FONT-COLOR);
+}
+
+h1 {
+	font-size: 3.75rem;
+	font-weight: 700;
+}
+h2 {
+	font-size: 3.125rem;
+	font-weight: 700;
+}
+h3 {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+h5 {
+	/* Body/Medium/Intro - my H5  doesnt exist in figma */
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+a {
+	font-size: 1.0625rem;
+	text-decoration: none;
+	color: var(--LINK-COLOR);
+}
+/* a: :visited{ color:  }  potem moge dodac  */
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background-color: var(--BGCOLOR);
+}
+
+li {
+	list-style: none;
+}
+
+li a {
+	/* display: block; full bottons clicabkle not just test */
+	border: 2px solid yellow;
+	display: inline-block;
+}
+
+li a,
+li a:visited {
+	text-decoration: none;
+	color: #6b708d;
+}
+
+li:first-child a {
+	color: var(--LINK-COLOR);
+}
+
+li a:hover,
+li a:focus {
+	cursor: pointer;
+	color: black;
+	/* background: can add */
+}
