@@ -1,0 +1,69 @@
+/* --- RESET */
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* to have padding and border incl in width and height */
+}
+
+/* Makes images easier to work with */
+img {
+	display: block; /* removes space due to inline setting with text */
+	max-width: 100%; /* so that image doesnt overflow its container */
+	height: auto; /* because of added height in html to prevent layout shift */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* --- VARIABLES */
+
+:root {
+	/* FONTS */
+	font-size: 16px; /* to match figma settings */
+	--FF: "Roboto", sans-serif;
+	/* --FS: clamp(1.25rem, 2.2vh, 1.5rem); */
+
+	/* COLORS */
+	--BGCOLOR: #f4f6fc;
+	/* --ALT-BGCOLOR:white; */
+	--BTN-COLOR: #072ac8;
+	--HEADERS-FONT-COLOR: #292e47;
+	--FONT-COLOR: #6b708d;
+	--LINK-COLOR: #072ac8;
+
+	/* creation  to use on card*/
+	--BOX-SHADOW: 0 0 10px #292e47;
+
+	/* --LINK-ACTIVE: ; */
+
+	/* --- PADDING */
+	/* --PADDING-TOP-BOTTOM:; */
+	--PADDING-LEFT-RIGHT: 0rem 10.625rem;
+
+	/* --- MARGIN */
+	/* --MARGIN: clamp(1em,2.5vh,1.5em);  min,val,max */
+}
+
+/* --- UTILITY CLASSES */
+
+/* not to split certain words, trza dac je w span z ta clasa */
+.nowrawp {
+	white-space: nowrap;
+}
+/* to hide something from the screen */
+.offscreen {
+	position: absolute;
+	left: -10000px;
+}
+/* not applied yet */
+.center {
+	text-align: center;
+}
