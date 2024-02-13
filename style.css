@@ -168,3 +168,35 @@ li a:focus {
 	color: black;
 	/* background: can add */
 }
+
+/*  --- HEADER STYLES */
+
+.header__container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	border: 2px solid red;
+	justify-content: space-between; /* na duzym ekranie rozstaw */
+	/* margin-inline: 0 auto;  		*/
+}
+
+.header__nav {
+	/* Headline/Medium COPY */
+	font-weight: 500;
+	line-height: 1.38125rem; /* 130% */
+}
+
+.header__ul {
+	border: 2px solid black;
+	/* original display: inline-flex;  align-items: flex-start;  gap: 3.75rem; */
+	display: flex; /* to have menu as a row */
+	gap: 3.75rem;
+}
+
+/* neeeded? */
+.header-circle-logo img {
+	border: 2px red solid;
+	min-width: 3.78294rem;
+	min-height: 1.15356rem;
+	/* flex-shrink: 0; */
+}
