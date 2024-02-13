@@ -234,3 +234,72 @@ li a:focus {
 /* ********** SYSTEM DARK MODE SETTINGS *********** */
 @media (prefers-color-scheme: dark) {
 }
+
+.menu_icon {
+	/* fix */
+	/* display: none; */
+}
+
+.contact-us-button {
+	color: #fff;
+	background: #072ac8;
+
+	/* Headline/Medium COPY*/
+	/* font-size: 1.0625rem; w a  */
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem  */
+	padding: 0.9375em 2.25em;
+	text-align: center;
+	border: 2px red solid;
+
+	/* display: inline-block; */ /* nie bylo trza */
+	/* to set margin,padding, w, h */
+}
+.contact-us-button-container {
+	/* stworzyc */
+	/* orig display: flex;
+width: 9.375rem;
+padding: 0.9375rem 2.25rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem; */
+}
+/* 
+.buttons {
+	display: flex;
+	gap: 2.5rem;
+	width: 9.375rem;
+	padding: 0.9375rem 2.3125rem;
+	justify-content: center;
+	align-items: center;
+}  */
+
+/* --- as per figma data */
+
+.body-regular-intro {
+	/* Body/Regular */
+	font-size: 1.25rem;
+	line-height: 150%; /* 1.875rem */
+}
+
+.headline-regular {
+	/* Headline/Regular */
+	/* font-size: 1.0625rem; do a */
+	line-height: 150%; /* 1.59375rem */
+}
+
+.headline-medium {
+	/* Headline/Medium */
+	/* font-size: 1.0625rem; do a*/
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem */
+}
+
+.caption-regular {
+	/* Caption/1 */
+	font-size: 0.9375rem;
+}
+.caption-regular-smallest {
+	/* Caption/2 */
+	font-size: 0.8125rem;
+}
