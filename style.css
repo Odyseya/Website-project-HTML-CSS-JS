@@ -35,6 +35,7 @@ select {
 	--BGCOLOR: #f4f6fc;
 	/* --ALT-BGCOLOR:white; */
 	--BTN-COLOR: #072ac8;
+	--BTN-FONT-COLOR: #ffffff;
 	--HEADERS-FONT-COLOR: #292e47;
 	--FONT-COLOR: #6b708d;
 	--LINK-COLOR: #072ac8;
@@ -221,6 +222,11 @@ li a:focus {
 		align-items: center;
 		padding-top: 10%;
 	}
+
+	.hero-section {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 /* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
@@ -240,39 +246,72 @@ li a:focus {
 	/* display: none; */
 }
 
-.contact-us-button {
-	color: #fff;
-	background: #072ac8;
-
-	/* Headline/Medium COPY*/
-	/* font-size: 1.0625rem; w a  */
-	font-weight: 500;
-	line-height: 130%; /* 1.38125rem  */
-	padding: 0.9375em 2.25em;
-	text-align: center;
-	border: 2px red solid;
-
-	/* display: inline-block; */ /* nie bylo trza */
-	/* to set margin,padding, w, h */
-}
-.contact-us-button-container {
-	/* stworzyc */
-	/* orig display: flex;
-width: 9.375rem;
-padding: 0.9375rem 2.25rem;
-justify-content: center;
-align-items: center;
-gap: 0.625rem; */
-}
-/* 
-.buttons {
+.button {
 	display: flex;
-	gap: 2.5rem;
-	width: 9.375rem;
-	padding: 0.9375rem 2.3125rem;
 	justify-content: center;
 	align-items: center;
-}  */
+	gap: 0.625rem; /* nic nie zmienia?? */
+
+	background: var(--BTN-COLOR);
+	color: var(--BTN-FONT-COLOR);
+
+	text-align: center;
+	/* headline-medium: */
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem */
+	border: 1px solid white;
+}
+
+.header__button {
+	padding: 0.9375em 2.25em;
+	/* width: 9.375rem; needed? robi sie wysoki*/
+}
+
+/* --- HERO SECTION */
+
+.hero-section {
+	margin-top: 6.25rem;
+	margin-bottom: 8.12rem;
+	display: flex;
+	flex-direction: row-reverse;
+	height: 40.625rem;
+	border: 1px solid red;
+}
+
+.hero-right-side-container {
+	flex: 1 1 50%;
+	position: relative;
+	background-image: url("../project-assets/hero-section/hero-image.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+/* to fix, pic is resizing not in sync */
+.hero__card-icon {
+	position: absolute;
+	width: 70%;
+	height: auto; /* Maintain aspect ratio */
+	top: -1.5rem;
+	left: -3.5rem;
+}
+
+.hero__accepted-icon {
+	position: absolute;
+	top: 60%;
+	left: 48%;
+	width: 65%;
+	height: auto; /* Maintain aspect ratio */
+}
+
+.hero-left-side-container {
+	flex: 1 1 50%;
+}
+
+.hero__button {
+	padding: 0.9375rem 2.3125rem;
+	width: 150px;
+}
 
 /* --- as per figma data */
 
@@ -291,6 +330,7 @@ gap: 0.625rem; */
 .headline-medium {
 	/* Headline/Medium */
 	/* font-size: 1.0625rem; do a*/
+	/* buttons */
 	font-weight: 500;
 	line-height: 130%; /* 1.38125rem */
 }
