@@ -243,7 +243,6 @@ li a:focus {
 	display: flex;
 	flex-direction: row-reverse;
 	margin-top: 6.25rem;
-	margin-bottom: 8.12rem;
 	height: auto;
 	border: 1px solid red;
 }
@@ -288,6 +287,31 @@ li a:focus {
 .hero-paragraph {
 	margin-right: 5.94rem;
 }
+
+.logos-section {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	filter: grayscale(1);
+	margin-top: 8.12rem;
+	margin-bottom: 12.5rem;
+
+	border: 1px solid red;
+}
+
+.logos-section:hover {
+	filter: grayscale(0);
+	transition: all 400ms ease;
+}
+
+.logo {
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+/* --- LOGOS SECTION */
 
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
 @media screen and (max-width: 746px) {
