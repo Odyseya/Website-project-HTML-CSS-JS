@@ -129,6 +129,10 @@ h5 {
 	font-weight: 500;
 }
 
+p {
+	margin: 1rem 0 1rem 0;
+}
+
 a {
 	font-size: 1.0625rem;
 	text-decoration: none;
@@ -202,45 +206,6 @@ li a:focus {
 	/* flex-shrink: 0; */
 }
 
-/* ********** SMALL MOBILE, iPads, Tablets *********** */
-@media screen and (max-width: 746px) {
-	h1,
-	h2,
-	h3 {
-		font-size: 2rem;
-	}
-	body {
-		padding: 1rem;
-	}
-	.header__container {
-		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
-	}
-
-	.header__ul {
-		flex-flow: column;
-		gap: 1rem; /* bo jest wieksza w */
-		align-items: center;
-		padding-top: 10%;
-	}
-
-	.hero-section {
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-/* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
-@media screen and (min-width: 747px) {
-}
-
-/* ********** MOBILE DEVICE LANDSCAPE *********** */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-}
-
-/* ********** SYSTEM DARK MODE SETTINGS *********** */
-@media (prefers-color-scheme: dark) {
-}
-
 .menu_icon {
 	/* fix */
 	/* display: none; */
@@ -259,7 +224,7 @@ li a:focus {
 	/* headline-medium: */
 	font-weight: 500;
 	line-height: 130%; /* 1.38125rem */
-	border: 1px solid white;
+	border: 1px solid red;
 }
 
 .header__button {
@@ -267,24 +232,30 @@ li a:focus {
 	/* width: 9.375rem; needed? robi sie wysoki*/
 }
 
+.hero__buttons {
+	display: inline-flex;
+	padding: 0.9375rem 2.3125rem;
+}
+
 /* --- HERO SECTION */
 
 .hero-section {
-	margin-top: 6.25rem;
-	margin-bottom: 8.12rem;
 	display: flex;
 	flex-direction: row-reverse;
-	height: 40.625rem;
+	margin-top: 6.25rem;
+	margin-bottom: 8.12rem;
+	height: auto;
 	border: 1px solid red;
 }
 
 .hero-right-side-container {
-	flex: 1 1 50%;
+	width: 50%;
 	position: relative;
 	background-image: url("../project-assets/hero-section/hero-image.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
+	border: 1px solid blue;
 }
 
 /* to fix, pic is resizing not in sync */
@@ -305,12 +276,66 @@ li a:focus {
 }
 
 .hero-left-side-container {
-	flex: 1 1 50%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid green;
+	margin-top: 4rem;
+	margin-bottom: 5rem;
 }
 
-.hero__button {
-	padding: 0.9375rem 2.3125rem;
-	width: 150px;
+.hero-paragraph {
+	margin-right: 5.94rem;
+}
+
+/* ********** SMALL MOBILE, iPads, Tablets *********** */
+@media screen and (max-width: 746px) {
+	h1,
+	h2,
+	h3 {
+		font-size: 2rem;
+	}
+	body {
+		padding: 1.5rem;
+	}
+	.header__container {
+		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
+	}
+
+	.header__ul {
+		flex-flow: column;
+		gap: 1rem; /* bo jest wieksza w */
+		align-items: center;
+		padding-top: 10%;
+	}
+
+	/* --!!! why does it cause guy pic to disapear? : */
+	/* .hero-section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	} */
+}
+
+/* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
+@media screen and (min-width: 747px) and (max-width: 1086px) {
+	h1,
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	body {
+		padding: 3rem;
+	}
+}
+
+/* ********** MOBILE DEVICE LANDSCAPE *********** */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+}
+
+/* ********** SYSTEM DARK MODE SETTINGS *********** */
+@media (prefers-color-scheme: dark) {
 }
 
 /* --- as per figma data */
