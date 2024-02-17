@@ -35,6 +35,7 @@ select {
 	--BGCOLOR: #f4f6fc;
 	/* --ALT-BGCOLOR:white; */
 	--BTN-COLOR: #072ac8;
+	--BTN-FONT-COLOR: #ffffff;
 	--HEADERS-FONT-COLOR: #292e47;
 	--FONT-COLOR: #6b708d;
 	--LINK-COLOR: #072ac8;
@@ -128,10 +129,15 @@ h5 {
 	font-weight: 500;
 }
 
+p {
+	margin: 0.5rem 0 0.5rem 0;
+}
+
 a {
 	font-size: 1.0625rem;
 	text-decoration: none;
 	color: var(--LINK-COLOR);
+	display: inline-block;
 }
 /* a: :visited{ color:  }  potem moge dodac  */
 
@@ -201,6 +207,172 @@ li a:focus {
 	/* flex-shrink: 0; */
 }
 
+.menu_icon {
+	/* fix */
+	/* display: none; */
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.625rem; /* nic nie zmienia?? */
+
+	background: var(--BTN-COLOR);
+	color: var(--BTN-FONT-COLOR);
+
+	text-align: center;
+	/* headline-medium: */
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem */
+	border: 1px solid red;
+}
+
+.header__button {
+	padding: 0.9375em 2.25em;
+	/* width: 9.375rem; needed? robi sie wysoki*/
+}
+
+/* --- HERO SECTION */
+
+.hero__buttons {
+	display: inline-flex;
+	padding: 0.9375rem 2.3125rem;
+}
+
+.hero-section {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 6.25rem;
+	/* height: auto; */
+	border: 1px solid red;
+}
+
+.hero-right-side-container {
+	width: 50%;
+	position: relative;
+	background-image: url("./project-assets/hero-section/hero-image.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	border: 1px solid blue;
+}
+
+.item {
+	flex: 1; /* This will make the items grow and shrink equally */
+	/* You can also use flex: 0 0 auto; to prevent them from growing or shrinking */
+	/* flex: 0 1 auto; would allow them to shrink but not grow */
+}
+/* to fix, pic is resizing not in sync */
+.hero__card-icon {
+	position: absolute;
+	width: 70%;
+	height: auto; /* Maintain aspect ratio */
+	top: -1.5rem;
+	left: -4.5rem;
+}
+
+.hero__accepted-icon {
+	position: absolute;
+	top: 60%;
+	left: 48%;
+	width: 65%;
+	height: auto; /* Maintain aspect ratio */
+}
+
+.hero-left-side-container {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid green;
+	margin-top: 4rem;
+	margin-bottom: 5rem;
+}
+
+.hero-paragraph {
+	margin-right: 5.94rem;
+}
+
+/* --- LOGOS SECTION */
+
+.logos-section {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	filter: grayscale(1);
+	margin-top: 8.12rem;
+	margin-bottom: 12.5rem;
+
+	border: 1px solid red;
+}
+
+.logos-section:hover {
+	filter: grayscale(0);
+	transition: all 400ms ease;
+}
+
+.logo {
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+/* --- PROJECTS SECTION */
+
+.recent-projects-heading {
+	margin-bottom: 4.38rem;
+}
+
+.projects-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	gap: 2.5rem;
+}
+
+.project-card {
+	width: 21.25rem;
+	height: 27.75rem;
+	overflow: hidden; /* ensure that the content is inside a card */
+	box-shadow: 0px 38.776px 77.552px 0px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-box {
+	height: 55%;
+}
+
+.project-img-1 {
+	background-image: url("./project-assets/projects-section/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-img-2 {
+	background-image: url("./project-assets/projects-section/2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-img-3 {
+	background-image: url("./project-assets/projects-section/3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-text-box {
+	height: 45%;
+	border: 1px solid red;
+	padding: 1.88rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
 @media screen and (max-width: 746px) {
 	h1,
@@ -209,7 +381,7 @@ li a:focus {
 		font-size: 2rem;
 	}
 	body {
-		padding: 1rem;
+		padding: 1.5rem;
 	}
 	.header__container {
 		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
@@ -221,10 +393,29 @@ li a:focus {
 		align-items: center;
 		padding-top: 10%;
 	}
+	.projects-container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	/* --!!! why does it cause guy pic to disapear? : */
+	/* .hero-section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	} */
 }
 
 /* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
-@media screen and (min-width: 747px) {
+@media screen and (min-width: 747px) and (max-width: 1086px) {
+	h1,
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	body {
+		padding: 3rem;
+	}
 }
 
 /* ********** MOBILE DEVICE LANDSCAPE *********** */
@@ -234,45 +425,6 @@ li a:focus {
 /* ********** SYSTEM DARK MODE SETTINGS *********** */
 @media (prefers-color-scheme: dark) {
 }
-
-.menu_icon {
-	/* fix */
-	/* display: none; */
-}
-
-.contact-us-button {
-	color: #fff;
-	background: #072ac8;
-
-	/* Headline/Medium COPY*/
-	/* font-size: 1.0625rem; w a  */
-	font-weight: 500;
-	line-height: 130%; /* 1.38125rem  */
-	padding: 0.9375em 2.25em;
-	text-align: center;
-	border: 2px red solid;
-
-	/* display: inline-block; */ /* nie bylo trza */
-	/* to set margin,padding, w, h */
-}
-.contact-us-button-container {
-	/* stworzyc */
-	/* orig display: flex;
-width: 9.375rem;
-padding: 0.9375rem 2.25rem;
-justify-content: center;
-align-items: center;
-gap: 0.625rem; */
-}
-/* 
-.buttons {
-	display: flex;
-	gap: 2.5rem;
-	width: 9.375rem;
-	padding: 0.9375rem 2.3125rem;
-	justify-content: center;
-	align-items: center;
-}  */
 
 /* --- as per figma data */
 
@@ -291,6 +443,7 @@ gap: 0.625rem; */
 .headline-medium {
 	/* Headline/Medium */
 	/* font-size: 1.0625rem; do a*/
+	/* buttons */
 	font-weight: 500;
 	line-height: 130%; /* 1.38125rem */
 }
