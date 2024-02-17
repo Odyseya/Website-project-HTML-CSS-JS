@@ -347,18 +347,21 @@ li a:focus {
 	background-image: url("./project-assets/projects-section/1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .project-img-2 {
 	background-image: url("./project-assets/projects-section/2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .project-img-3 {
 	background-image: url("./project-assets/projects-section/3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .project-text-box {
