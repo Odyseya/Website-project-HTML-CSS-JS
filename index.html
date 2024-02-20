@@ -42,123 +42,104 @@
                 </ul>
             </nav>
             <!-- CONTACT BUTTON -->
-            <a class="contact-us-button" href="contact.html">Contact Us</a>
+            <a class="header__button button" href="contact.html">Contact Us</a>
 
         </div>
     </header>
+
     <main>
         <section id="home" class="hero-section">
 
-            <div class="left-sde-content">
-                <h1>Empower Your Business With Stunning Design!</h1>
-                <p class="body-regular-intro">Circle is a digital design and development studio. We design and develop
-                    astonishing websites and
-                    mobile apps.</p>
+            <div class="hero-right-side-container item">
 
-                <div class="buttons">
-                    <a href="#" class="get-in-touch">Get in touch</a>
-                    <a href="#" class="see-our-work">See our work</a>
-                </div>
+                <img class="hero__card-icon" src="./project-assets/hero-section/card-1.png" alt="card image" width="754"
+                    height="806">
+
+                <img class="hero__accepted-icon" src="./project-assets/hero-section/card-2.png" alt="project accepted"
+                    width="692" height="697">
             </div>
 
 
-            <figure class="profile-hero-picture"> <!-- not used yet -->
-                <img id=hero-image src="./project-assets/hero-section/hero-image.png" alt="hero image" width="1140"
-                    height="1274">
-                <figcaption class="offscreen">John Smith</figcaption>
-            </figure>
-            <!-- image contanier:
-                display: flex;
-width: 35.625rem;
-height: 39.8125rem;
-flex-direction: column;
-justify-content: center;
-align-items: center;
 
-image itself:
-width: 38.43506rem;
-height: 39.83831rem;
-             -->
-            <img id="card-icon" src="./project-assets/hero-section/card-1.png" alt="card image" width="754"
-                height="806">
-            <!-- width: 11.875rem;
-height: 13.5rem;
-flex-shrink: 0; 
-border-radius: 1.875rem;
-background: #FFF;
-box-shadow: 0px 46.569px 93.137px 0px rgba(0, 0, 0, 0.10);-->
-            <img id="accepted-icon" src="./project-assets/hero-section/card-2.png" alt="project accepted" width="692"
-                height="697">
-            <!-- 
-                width: 11.875rem;
-height: 12.0625rem;
-flex-shrink: 0;
-border-radius: 1.875rem;
-background: #FFF;
-box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.10);
-             -->
-            <!-- </div> -->
+            <div class="hero-left-side-container item">
+
+                <h1>Empower Your Business With Stunning Design!</h1>
+                <p class="body-regular-intro hero-paragraph">Circle is a digital design and development studio. We
+                    design and develop
+                    astonishing websites and
+                    mobile apps.</p>
+
+                <div>
+                    <a class="hero__buttons button" href="#"><span class="nowrawp">Get in
+                            touch</span></a>
+                    <a class="hero__buttons" href="#projects"><span class="nowrawp">See our work</span></a>
+                </div>
+
+            </div>
 
         </section>
 
         <!-- EXTERNAL LOGOS -->
-        <section class="external-logos-section">
-            <div class="external-logos-container">
-                <!-- logo pic max height 2rem , w rozne a contaniers w 9.37 na h 6rem-->
-                <img src="./project-assets/logos/airbnb-logo.svg" alt="Airbnb logo">
-                <img src="./project-assets/logos/google-logo.svg" alt="Google logo">
-                <img src="./project-assets/logos/microsoft-logo.svg" alt="Microsoft logo">
-                <img src="./project-assets/logos/fedex-logo.svg" alt="FedEx logo">
-                <img src="./project-assets/logos/amazon-logo.svg" alt="Amazon logo">
-            </div>
+        <section class="logos-section">
+
+            <img class="logo" src="./project-assets/logos/airbnb-logo.svg" alt="Airbnb logo">
+            <img class="logo" src="./project-assets/logos/google-logo.svg" alt="Google logo">
+            <img class="logo" src="./project-assets/logos/microsoft-logo.svg" alt="Microsoft logo">
+            <img class="logo" src="./project-assets/logos/fedex-logo.svg" alt="FedEx logo">
+            <img class="logo" src="./project-assets/logos/amazon-logo.svg" alt="Amazon logo">
+
         </section>
 
         <!-- RECENT PROJECT SECTION -->
-        <section id="projects" class="projects-section">
-            <h3>Recent Projects</h3>
+        <section class="projects" id="projects">
+
+            <h3 class="recent-projects-heading">Recent Projects</h3>
 
             <div class="projects-container">
+
                 <!-- DESIGN ONE -->
-                <div class="design-container">
-                    <div class="project-image">
-                        <img src="./project-assets/projects-section/1.jpg" alt="design 1" width="4096" height="3112">
+                <article class="project-card">
+
+                    <div class="project-image-box project-img-1"></div>
+
+                    <div class="project-text-box">
+                        <DIV>
+                            <h5>Simplify</h5>
+                            <p>UI Design & App Development</p>
+                        </DIV>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Simplify</h5>
-                        <p>UI Design & App Development</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
-                    </div>
-
-                </div>
+                </article>
 
                 <!-- DESIGN TWO -->
-                <div class="design-container">
-                    <div class="project-image">
-                        <img src="./project-assets/projects-section/2.jpg" alt="design 2" width="4096" height="3112">
+                <article class="project-card">
+
+                    <div class="project-image-box project-img-2"></div>
+
+                    <div class="project-text-box">
+                        <DIV>
+                            <h5>Dashcoin</h5>
+                            <p>Web Development</p>
+                        </DIV>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Dashcoin</h5>
-                        <p>Web Development</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
-                    </div>
-
-                </div>
+                </article>
 
                 <!-- DESIGN TREE -->
-                <div class="design-container">
-                    <div class="project-image">
-                        <img src="./project-assets/projects-section/3.jpg" alt="design 3" width="3000" height="2000">
+                <article class="project-card">
+                    <div class="project-image-box project-img-3"></div>
+
+                    <div class="project-text-box">
+                        <DIV>
+                            <h5>Vectorify</h5>
+                            <p>User Experience Design</p>
+                        </DIV>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Vectorify</h5>
-                        <p>User Experience Design</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
-                    </div>
-
-                </div>
+                </article>
             </div>
         </section>
 
@@ -195,83 +176,104 @@ box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.10);
 
         <!-- SERVICES SECTION -->
         <section id="services">
-            <h3>Our Services</h3>
+
+            <h3 class="services-section-heading">Our Services</h3>
+
             <div class="services-container">
+
                 <!-- INTERFACE -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/1.svg" alt="pen icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>User Interface Design</h5>
-                        <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <div>
+                                <h5 class="service-title">User Interface Design</h5>
+                            </div>
+                            <p class="service-paragraph">Circle provides you with a stunning user interface design that
+                                is accessible to everyone.
+                            </p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                </div>
+                </article>
 
                 <!--EXPERIENCE -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/2.svg" alt="cursor icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>User Experience Design</h5>
-                        <p>Circle always focuses on delivering the best user experience to your customers.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <div>
+                                <h5 class="service-title">User Experience Design</h5>
+                            </div>
+                            <p class="service-paragraph">Circle always focuses on delivering the best user experience to
+                                your customers.</p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                </div>
+                </article>
 
                 <!-- APPLICATION DEV -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/3.svg" alt="development icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>Application Development</h5>
-                        <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <h5 class="service-title">Application Development</h5>
+                            <p class="service-paragraph">We develop high-quality mobile and web applications using the
+                                latest technology stack.
+                            </p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
+                </article>
 
-                </div>
             </div>
         </section>
         <!-- SUBSCRIBE FORM -->
-        <section class="subscribe">
+        <section class="cta">
+
             <h3>Do you have any questions?</h3>
-            <p>Let us help you!</p>
+            <p class="body-regular-intro">Let us help you!</p>
 
-            <form action="">
+            <form class="form" action="" method="get">
 
-                <div class="mail-input-contanier">
+                <div class="email-container">
                     <img src="./project-assets/newsletter/icon/mail.svg" alt="mail icon">
-                    <input class="input-email" type="email" placeholder="Enter your email" />
+                    <input class="headline-regular" type="email" placeholder="Enter your email" name="email" />
                 </div>
-
                 <!--SUBSCRIBE BUTTON -->
-                <div class="subscribe-button-container">
-                    <input class="input-subscribe-text" type="submit" value="Subscribe">
-                </div>
+                <!-- or type submit? -->
+                <input class="button btn--form" type="button" value="Subscribe" />
+
             </form>
 
         </section>
     </main>
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
+
         <!-- LOGO AND ADRESS  -->
-        <div class="footer-adress">
+        <div class="container">
             <img src="./project-assets/logos/circle.svg" alt="Circle logo">
-            <p>
+            <p class="headline-regular">
                 2972 Westheimer Rd. Santa Ana,
                 <br>Illinois 85486
             </p>
         </div>
 
-        <div class="footer-links-container">
+        <div class="links">
             <!-- make a grid  -->
             <div><a href="#">Team</a></div>
             <div><a href="#">Services</a></div>
