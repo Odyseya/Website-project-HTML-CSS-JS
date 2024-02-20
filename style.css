@@ -33,12 +33,17 @@ select {
 
 	/* COLORS */
 	--BGCOLOR: #f4f6fc;
+	--BGCOLOR-TESTIMONIAL: #292e47;
+	--BGCOLOR-SERVICE-CARD: #ffffff;
+	--BGCOLOR-ICON: #ecf7ff;
+	--BGCOLOR-CTA: #ffc600;
 	/* --ALT-BGCOLOR:white; */
 	--BTN-COLOR: #072ac8;
+	--BTN-FONT-COLOR: #ffffff;
 	--HEADERS-FONT-COLOR: #292e47;
 	--FONT-COLOR: #6b708d;
 	--LINK-COLOR: #072ac8;
-
+	--FOOTER-LINK-COLOR: #6b708d;
 	/* creation  to use on card*/
 	--BOX-SHADOW: 0 0 10px #292e47;
 
@@ -46,6 +51,7 @@ select {
 
 	/* --- PADDING */
 	/* --PADDING-TOP-BOTTOM:; */
+	--PADDING-TESTIMONIAL-L-R: 0rem 3.75rem;
 	--PADDING-LEFT-RIGHT: 0rem 10.625rem;
 
 	/* --- MARGIN */
@@ -79,11 +85,8 @@ html {
 body {
 	background-color: var(--BGCOLOR);
 	color: var(--FONT-COLOR);
-
 	min-height: 100vh; /* Ensure full viewport height for vertical centering */
 	max-width: 90rem;
-	min-width: 320px; /* needed? */
-
 	display: flex;
 	flex-direction: column; /* sets content from top to bottom on mobile */
 
@@ -92,8 +95,10 @@ body {
 	font-weight: 400;
 	line-height: normal; /* 1.2 to 1.45em */
 
-	padding: var(--PADDING-LEFT-RIGHT);
 	padding-top: 4.375em;
+	margin-inline: 0 auto;
+	padding: var(--PADDING-LEFT-RIGHT);
+	border: 1px solid blue;
 }
 
 h1,
@@ -128,10 +133,15 @@ h5 {
 	font-weight: 500;
 }
 
+p {
+	margin: 0.5rem 0 0.5rem 0;
+}
+
 a {
 	font-size: 1.0625rem;
 	text-decoration: none;
 	color: var(--LINK-COLOR);
+	display: inline-block;
 }
 /* a: :visited{ color:  }  potem moge dodac  */
 
@@ -167,4 +177,499 @@ li a:focus {
 	cursor: pointer;
 	color: black;
 	/* background: can add */
+}
+
+/*  --- HEADER STYLES */
+
+.header__container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	border: 2px solid red;
+	justify-content: space-between; /* na duzym ekranie rozstaw */
+}
+
+.header__nav {
+	/* Headline/Medium COPY */
+	font-weight: 500;
+	line-height: 1.38125rem; /* 130% */
+}
+
+.header__ul {
+	border: 2px solid black;
+	/* original display: inline-flex;  align-items: flex-start;  gap: 3.75rem; */
+	display: flex; /* to have menu as a row */
+	gap: 3.75rem;
+}
+
+/* neeeded? */
+.header-circle-logo img {
+	border: 2px red solid;
+	min-width: 3.78294rem;
+	min-height: 1.15356rem;
+	/* flex-shrink: 0; */
+}
+
+.menu_icon {
+	/* fix */
+	/* display: none; */
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.625rem; /* nic nie zmienia?? */
+
+	background: var(--BTN-COLOR);
+	color: var(--BTN-FONT-COLOR);
+
+	text-align: center;
+	/* headline-medium: */
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem */
+	border: 1px solid red;
+}
+
+.header__button {
+	padding: 0.9375em 2.25em;
+	/* width: 9.375rem; needed? robi sie wysoki*/
+}
+
+/* --- HERO SECTION */
+
+.hero__buttons {
+	display: inline-flex;
+	padding: 0.9375rem 2.3125rem;
+}
+
+.hero-section {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 6.25rem;
+	/* height: auto; */
+	border: 1px solid red;
+}
+
+.hero-right-side-container {
+	width: 50%;
+	position: relative;
+	background-image: url("./project-assets/hero-section/hero-image.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	border: 1px solid blue;
+}
+
+.item {
+	flex: 1; /* This will make the items grow and shrink equally */
+	/* You can also use flex: 0 0 auto; to prevent them from growing or shrinking */
+	/* flex: 0 1 auto; would allow them to shrink but not grow */
+}
+/* to fix, pic is resizing not in sync */
+.hero__card-icon {
+	position: absolute;
+	width: 70%;
+	height: auto; /* Maintain aspect ratio */
+	top: -1.5rem;
+	left: -4.5rem;
+}
+
+.hero__accepted-icon {
+	position: absolute;
+	top: 60%;
+	left: 48%;
+	width: 65%;
+	height: auto; /* Maintain aspect ratio */
+}
+
+.hero-left-side-container {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid green;
+	margin-top: 4rem;
+	margin-bottom: 5rem;
+}
+
+.hero-paragraph {
+	margin-right: 5.94rem;
+}
+
+/* --- LOGOS SECTION */
+
+.logos-section {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	filter: grayscale(1);
+	margin-top: 8.12rem;
+	margin-bottom: 12.5rem;
+
+	border: 1px solid red;
+}
+
+.logos-section:hover {
+	filter: grayscale(0);
+	transition: all 400ms ease;
+}
+
+.logo {
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+/* --- PROJECTS SECTION */
+
+.recent-projects-heading {
+	margin-bottom: 4.38rem;
+}
+
+.projects-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	gap: 2.5rem;
+}
+
+.project-card {
+	width: 21.25rem;
+	height: 27.75rem;
+	overflow: hidden;
+	/* ensure that the content is inside a card  */
+	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	min-width: 300px;
+}
+
+.project-image-box {
+	min-height: 55%;
+}
+
+.project-img-1 {
+	background-image: url("./project-assets/projects-section/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-img-2 {
+	background-image: url("./project-assets/projects-section/2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-img-3 {
+	background-image: url("./project-assets/projects-section/3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.project-text-box {
+	height: 45%;
+	border: 1px solid red;
+	padding: 1.88rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* applied headline regular class to Learn more */
+
+/* ---SERVICES SECTION */
+
+.services-section-heading {
+	margin-bottom: 4.38rem;
+}
+
+.services-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding-bottom: 4rem;
+	gap: 2.5rem;
+}
+
+.services-card {
+	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	background-color: var(--BGCOLOR-SERVICE-CARD);
+	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 21.75rem;
+	min-width: 300px;
+}
+
+.services-text {
+	height: 75%;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.circle {
+	width: 5rem;
+	height: 5rem;
+	background-color: var(--BGCOLOR-ICON);
+	border-radius: 3.1rem;
+
+	/* centering iocn in cirle: */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.service-title {
+	/* to make p start at the same height */
+	min-height: 6rem;
+}
+
+p,
+a {
+	border: 1px solid red;
+}
+
+/* add media query for text, so it surely doesnt get out */
+/* ---TESTIMONIAL SECTION */
+
+.testimonial-section {
+	margin-top: 12.5rem;
+	margin-bottom: 12.5rem;
+	background-color: var(--BGCOLOR-TESTIMONIAL);
+
+	/* padding is too big 	padding: var(--PADDING-TESTIMONIAL-L-R); doesnt work */
+}
+
+/* --- SUBSCIBE SECTION */
+
+/* Cta styiling */
+.cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--BGCOLOR-CTA);
+
+	margin-top: 12.5rem;
+	margin-bottom: 10.62rem;
+	padding: 8.5rem;
+}
+
+.cta > h3 {
+	margin-bottom: 1.25rem;
+	text-align: center;
+}
+.cta > p {
+	margin-bottom: 3rem;
+	color: var(--HEADERS-FONT-COLOR);
+}
+
+.form {
+	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	gap: 5%;
+}
+
+.email-container {
+	background-color: var(--BGCOLOR);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2%;
+	width: 56%;
+	height: 5rem;
+}
+
+.email-container > input {
+	background-color: #f4f6fc;
+	border: none;
+	width: 80%;
+	border: 1px solid red;
+}
+
+.email-container > img {
+	width: 9.3%;
+	margin-left: 8%;
+}
+
+.btn--form {
+	width: 28%;
+	height: 5rem;
+	padding: 0;
+}
+
+/* FOOTER */
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 6.25rem;
+	/* width: 100%; */
+	border: 1px solid red;
+}
+
+.container {
+	border: 1px solid red;
+	max-width: 30%;
+}
+
+.container img {
+	width: 38%;
+	margin-bottom: 1.5rem;
+	border: 1px solid red;
+}
+
+.links {
+	border: 1px solid red;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 3.75rem;
+	min-height: 5.6rem;
+	width: 27.19%; /*  27.1875rem; */
+}
+
+.links a {
+	color: var(--FOOTER-LINK-COLOR);
+}
+
+/* ********** SMALL MOBILE, iPads, Tablets *********** */
+@media screen and (max-width: 746px) {
+	h1,
+	h2,
+	h3 {
+		font-size: 2rem;
+	}
+	body {
+		padding: 1.5rem;
+	}
+
+	.header__container {
+		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
+	}
+
+	.header__ul {
+		flex-flow: column;
+		gap: 1rem; /* bo jest wieksza w */
+		align-items: center;
+		padding-top: 10%;
+	}
+	.projects-container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.services-container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	.service-title {
+		/* so space between h5 and p is ok*/
+		min-height: 3rem;
+	}
+	/* --!!! why does it cause guy pic to disapear? : */
+	/* .hero-section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	} */
+
+	/* --- CTA --- */
+	.cta {
+		padding: 7%;
+	}
+	.email-container {
+		width: 65%;
+	}
+	.btn--form {
+		width: 65%;
+	}
+	.form {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	/* FOOOTER */
+	.footer {
+		background-color: #a2d6f9;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.container img {
+		width: 4.28rem;
+	}
+
+	.links {
+		width: 60%;
+		column-gap: 5%;
+		row-gap: 10%;
+	}
+}
+
+/* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
+@media screen and (min-width: 747px) and (max-width: 1086px) {
+	h1,
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	body {
+		padding: 3rem;
+	}
+}
+
+/* ********** MOBILE DEVICE LANDSCAPE *********** */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+}
+
+/* ********** SYSTEM DARK MODE SETTINGS *********** */
+@media (prefers-color-scheme: dark) {
+}
+
+/* --- as per figma data */
+
+.body-regular-intro {
+	/* Body/Regular */
+	font-size: 1.25rem;
+	line-height: 150%; /* 1.875rem */
+}
+
+.headline-regular {
+	/* Headline/Regular */
+	/* font-size: 1.0625rem; do a */
+	line-height: 150%; /* 1.59375rem */
+}
+
+.headline-medium {
+	/* Headline/Medium */
+	/* font-size: 1.0625rem; do a*/
+	/* buttons */
+	font-weight: 500;
+	line-height: 130%; /* 1.38125rem */
+}
+
+.caption-regular {
+	/* Caption/1 */
+	font-size: 0.9375rem;
+}
+.caption-regular-smallest {
+	/* Caption/2 */
+	font-size: 0.8125rem;
 }
