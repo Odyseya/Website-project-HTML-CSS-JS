@@ -44,6 +44,8 @@ select {
 	--FONT-COLOR: #6b708d;
 	--LINK-COLOR: #072ac8;
 	--FOOTER-LINK-COLOR: #6b708d;
+
+	--SECONDARY: #ffc600;
 	/* creation  to use on card*/
 	--BOX-SHADOW: 0 0 10px #292e47;
 
@@ -131,10 +133,6 @@ h5 {
 	/* Body/Medium/Intro - my H5  doesnt exist in figma */
 	font-size: 1.5rem;
 	font-weight: 500;
-}
-
-p {
-	margin: 0.5rem 0 0.5rem 0;
 }
 
 a {
@@ -431,12 +429,8 @@ li a:focus {
 	min-height: 6rem;
 }
 
-p,
-a {
-	border: 1px solid red;
-}
-
 /* add media query for text, so it surely doesnt get out */
+
 /* ---TESTIMONIAL SECTION */
 
 .testimonial-section {
@@ -444,12 +438,75 @@ a {
 	margin-bottom: 12.5rem;
 	background-color: var(--BGCOLOR-TESTIMONIAL);
 
-	/* padding is too big 	padding: var(--PADDING-TESTIMONIAL-L-R); doesnt work */
+	height: 31rem; /* height: 38.875rem;  */
+}
+/*  */
+.emoji-orbit {
+	height: 31rem;
+	background-image: url("./project-assets/testimonial-section/orbit.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.emoji img {
+	width: 9.375rem;
+}
+
+.emoji {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	align-content: space-between;
+	height: inherit; /* of section */
+
+	padding: 3rem 3rem;
+}
+
+.testimonial-middle-container {
+	position: relative;
+	top: -31rem;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.heading-testimonial {
+	color: #f4f6fc;
+}
+
+.testimonia-margin {
+	margin-top: 3rem;
+}
+
+.testimonal-quote {
+	text-align: center;
+	line-height: 1.9rem;
+	color: var(--SECONDARY);
+}
+
+.client-info-container img {
+	width: 3.125rem;
+	border-radius: 50%;
+}
+
+.client-info-container {
+	display: flex;
+	gap: 0.62rem;
+}
+
+.client-name {
+	color: #a2d6f9;
+}
+
+.caption {
+	color: #f4f6fc;
 }
 
 /* --- SUBSCIBE SECTION */
 
-/* Cta styiling */
 .cta {
 	display: flex;
 	flex-direction: column;
@@ -672,4 +729,9 @@ a {
 .caption-regular-smallest {
 	/* Caption/2 */
 	font-size: 0.8125rem;
+}
+
+p,
+a {
+	border: 1px solid red;
 }
