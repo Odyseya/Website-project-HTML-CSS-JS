@@ -328,22 +328,35 @@ li a:focus {
 
 .projects-container {
 	display: flex;
-	flex-flow: row;
+	flex-flow: row wrap;
 	justify-content: center;
 	gap: 2.5rem;
 }
 
 .project-card {
-	width: 21.25rem;
-	height: 27.75rem;
+	min-height: 27.75rem;
 	overflow: hidden;
 	/* ensure that the content is inside a card  */
 	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
-	min-width: 300px;
+	flex: 1;
+	max-width: 30%;
+	min-width: 255px;
 }
 
 .project-image-box {
-	min-height: 55%;
+	min-height: 15rem;
+}
+.project-text-box {
+	border: 1px solid red;
+	padding: 1.88rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 46%;
+}
+
+.project-text-box p {
+	margin-bottom: 1rem;
 }
 
 .project-img-1 {
@@ -351,6 +364,7 @@ li a:focus {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	/* height: 100%; */
 }
 
 .project-img-2 {
@@ -365,15 +379,6 @@ li a:focus {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-}
-
-.project-text-box {
-	height: 45%;
-	border: 1px solid red;
-	padding: 1.88rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 /* applied headline regular class to Learn more */
