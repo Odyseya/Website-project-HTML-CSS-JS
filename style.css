@@ -434,71 +434,81 @@ li a:focus {
 /* ---TESTIMONIAL SECTION */
 
 .testimonial-section {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	/* grid-auto-rows: 300px;
+	grid-auto-columns: 300px; */
 	margin-top: 12.5rem;
 	margin-bottom: 12.5rem;
 	background-color: var(--BGCOLOR-TESTIMONIAL);
+	border: 2px solid red;
 
-	height: 31rem; /* height: 38.875rem;  */
+	/* responsive: */
+	min-height: 38.875rem;
 }
-/*  */
+
 .emoji-orbit {
-	height: 31rem;
 	background-image: url("./project-assets/testimonial-section/orbit.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
-.emoji img {
-	width: 9.375rem;
-}
-
 .emoji {
-	display: grid;
-	grid-template-columns: auto auto;
-	justify-content: space-between;
-	align-content: space-between;
-	height: inherit; /* of section */
+	/* width: 150px;
+	height: 150px; */
 
-	padding: 3rem 3rem;
+	/* responsive: */
+	width: 50%;
+	height: auto;
+	min-width: 80px;
+
+	place-self: center;
 }
 
-.testimonial-middle-container {
-	position: relative;
-	top: -31rem;
-	height: inherit;
-	display: flex;
-	flex-direction: column;
+.testimonial-box {
+	border: 1px solid pink;
+	display: grid;
 	align-items: center;
 	justify-content: center;
 }
 
-.heading-testimonial {
-	color: #f4f6fc;
+.text {
+	grid-column: 2/3;
+	grid-row: 1/3;
+	display: grid;
+	place-content: space-evenly center;
+	text-align: center;
 }
 
-.testimonia-margin {
-	margin-top: 3rem;
+.heading-testimonial {
+	color: #f4f6fc;
+	padding: 1rem 0 0 0;
 }
 
 .testimonal-quote {
-	text-align: center;
 	line-height: 1.9rem;
 	color: var(--SECONDARY);
-}
-
-.client-info-container img {
-	width: 3.125rem;
-	border-radius: 50%;
+	padding: 1rem 0 0 0;
 }
 
 .client-info-container {
 	display: flex;
 	gap: 0.62rem;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+.client-info-container img {
+	width: 3.125rem;
+	height: auto;
+	border-radius: 50%;
 }
 
 .client-name {
 	color: #a2d6f9;
+	font-size: 1.0625rem;
 }
 
 .caption {
@@ -608,7 +618,7 @@ li a:focus {
 	h1,
 	h2,
 	h3 {
-		font-size: 2rem;
+		font-size: 1.9rem;
 	}
 	body {
 		padding: 1.5rem;
