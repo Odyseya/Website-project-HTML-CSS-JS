@@ -386,8 +386,8 @@ li a:focus {
 
 .services-container {
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
+	flex-flow: row wrap;
+	justify-content: center;
 	padding-bottom: 4rem;
 	gap: 2.5rem;
 }
@@ -398,9 +398,9 @@ li a:focus {
 	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	max-width: 21.75rem;
-	min-width: 300px;
+
+	max-width: calc(33% - 2.5rem);
+	min-width: 280px;
 }
 
 .services-text {
