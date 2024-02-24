@@ -91,7 +91,7 @@
         </section>
 
         <!-- RECENT PROJECT SECTION -->
-        <section id="projects" class="projects">
+        <section class="projects" id="projects">
 
             <h3 class="recent-projects-heading">Recent Projects</h3>
 
@@ -107,7 +107,7 @@
                             <h5>Simplify</h5>
                             <p>UI Design & App Development</p>
                         </DIV>
-                        <a href="#">Learn more</a>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
                 </article>
@@ -122,7 +122,7 @@
                             <h5>Dashcoin</h5>
                             <p>Web Development</p>
                         </DIV>
-                        <a href="#">Learn more</a>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
                 </article>
@@ -136,7 +136,7 @@
                             <h5>Vectorify</h5>
                             <p>User Experience Design</p>
                         </DIV>
-                        <a href="#">Learn more</a>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
                 </article>
@@ -176,83 +176,104 @@
 
         <!-- SERVICES SECTION -->
         <section id="services">
-            <h3>Our Services</h3>
+
+            <h3 class="services-section-heading">Our Services</h3>
+
             <div class="services-container">
+
                 <!-- INTERFACE -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/1.svg" alt="pen icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>User Interface Design</h5>
-                        <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <div>
+                                <h5 class="service-title">User Interface Design</h5>
+                            </div>
+                            <p class="service-paragraph">Circle provides you with a stunning user interface design that
+                                is accessible to everyone.
+                            </p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                </div>
+                </article>
 
                 <!--EXPERIENCE -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/2.svg" alt="cursor icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>User Experience Design</h5>
-                        <p>Circle always focuses on delivering the best user experience to your customers.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <div>
+                                <h5 class="service-title">User Experience Design</h5>
+                            </div>
+                            <p class="service-paragraph">Circle always focuses on delivering the best user experience to
+                                your customers.</p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
 
-                </div>
+                </article>
 
                 <!-- APPLICATION DEV -->
-                <div class="services-container">
-                    <div class="services-icon">
+                <article class="services-card">
+                    <div class="circle">
                         <img src="./project-assets/services-section/icons/3.svg" alt="development icon">
                     </div>
 
                     <div class="services-text">
-                        <h5>Application Development</h5>
-                        <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
-                        <a class="learn-more-button" href="#">Learn more</a>
+                        <div>
+                            <h5 class="service-title">Application Development</h5>
+                            <p class="service-paragraph">We develop high-quality mobile and web applications using the
+                                latest technology stack.
+                            </p>
+                        </div>
+                        <a class="headline-regular" href="#">Learn more</a>
                     </div>
+                </article>
 
-                </div>
             </div>
         </section>
         <!-- SUBSCRIBE FORM -->
-        <section class="subscribe">
+        <section class="cta">
+
             <h3>Do you have any questions?</h3>
-            <p>Let us help you!</p>
+            <p class="body-regular-intro">Let us help you!</p>
 
-            <form action="">
+            <form class="form" action="" method="get">
 
-                <div class="mail-input-contanier">
+                <div class="email-container">
                     <img src="./project-assets/newsletter/icon/mail.svg" alt="mail icon">
-                    <input class="input-email" type="email" placeholder="Enter your email" />
+                    <input class="headline-regular" type="email" placeholder="Enter your email" name="email" />
                 </div>
-
                 <!--SUBSCRIBE BUTTON -->
-                <div class="subscribe-button-container">
-                    <input class="input-subscribe-text" type="submit" value="Subscribe">
-                </div>
+                <!-- or type submit? -->
+                <input class="button btn--form" type="button" value="Subscribe" />
+
             </form>
 
         </section>
     </main>
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
+
         <!-- LOGO AND ADRESS  -->
-        <div class="footer-adress">
+        <div class="container">
             <img src="./project-assets/logos/circle.svg" alt="Circle logo">
-            <p>
+            <p class="headline-regular">
                 2972 Westheimer Rd. Santa Ana,
                 <br>Illinois 85486
             </p>
         </div>
 
-        <div class="footer-links-container">
+        <div class="links">
             <!-- make a grid  -->
             <div><a href="#">Team</a></div>
             <div><a href="#">Services</a></div>

@@ -33,13 +33,17 @@ select {
 
 	/* COLORS */
 	--BGCOLOR: #f4f6fc;
+	--BGCOLOR-TESTIMONIAL: #292e47;
+	--BGCOLOR-SERVICE-CARD: #ffffff;
+	--BGCOLOR-ICON: #ecf7ff;
+	--BGCOLOR-CTA: #ffc600;
 	/* --ALT-BGCOLOR:white; */
 	--BTN-COLOR: #072ac8;
 	--BTN-FONT-COLOR: #ffffff;
 	--HEADERS-FONT-COLOR: #292e47;
 	--FONT-COLOR: #6b708d;
 	--LINK-COLOR: #072ac8;
-
+	--FOOTER-LINK-COLOR: #6b708d;
 	/* creation  to use on card*/
 	--BOX-SHADOW: 0 0 10px #292e47;
 
@@ -47,6 +51,7 @@ select {
 
 	/* --- PADDING */
 	/* --PADDING-TOP-BOTTOM:; */
+	--PADDING-TESTIMONIAL-L-R: 0rem 3.75rem;
 	--PADDING-LEFT-RIGHT: 0rem 10.625rem;
 
 	/* --- MARGIN */
@@ -80,11 +85,8 @@ html {
 body {
 	background-color: var(--BGCOLOR);
 	color: var(--FONT-COLOR);
-
 	min-height: 100vh; /* Ensure full viewport height for vertical centering */
 	max-width: 90rem;
-	min-width: 320px; /* needed? */
-
 	display: flex;
 	flex-direction: column; /* sets content from top to bottom on mobile */
 
@@ -93,8 +95,10 @@ body {
 	font-weight: 400;
 	line-height: normal; /* 1.2 to 1.45em */
 
-	padding: var(--PADDING-LEFT-RIGHT);
 	padding-top: 4.375em;
+	margin-inline: 0 auto;
+	padding: var(--PADDING-LEFT-RIGHT);
+	border: 1px solid blue;
 }
 
 h1,
@@ -183,7 +187,6 @@ li a:focus {
 	align-items: center;
 	border: 2px solid red;
 	justify-content: space-between; /* na duzym ekranie rozstaw */
-	/* margin-inline: 0 auto;  		*/
 }
 
 .header__nav {
@@ -328,19 +331,21 @@ li a:focus {
 .projects-container {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-between;
+	justify-content: center;
 	gap: 2.5rem;
 }
 
 .project-card {
 	width: 21.25rem;
 	height: 27.75rem;
-	overflow: hidden; /* ensure that the content is inside a card */
-	box-shadow: 0px 38.776px 77.552px 0px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	/* ensure that the content is inside a card  */
+	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	min-width: 300px;
 }
 
 .project-image-box {
-	height: 55%;
+	min-height: 55%;
 }
 
 .project-img-1 {
@@ -373,6 +378,174 @@ li a:focus {
 	justify-content: space-between;
 }
 
+/* applied headline regular class to Learn more */
+
+/* ---SERVICES SECTION */
+
+.services-section-heading {
+	margin-bottom: 4.38rem;
+}
+
+.services-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding-bottom: 4rem;
+	gap: 2.5rem;
+}
+
+.services-card {
+	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	background-color: var(--BGCOLOR-SERVICE-CARD);
+	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 21.75rem;
+	min-width: 300px;
+}
+
+.services-text {
+	height: 75%;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.circle {
+	width: 5rem;
+	height: 5rem;
+	background-color: var(--BGCOLOR-ICON);
+	border-radius: 3.1rem;
+
+	/* centering iocn in cirle: */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.service-title {
+	/* to make p start at the same height */
+	min-height: 6rem;
+}
+
+p,
+a {
+	border: 1px solid red;
+}
+
+/* add media query for text, so it surely doesnt get out */
+/* ---TESTIMONIAL SECTION */
+
+.testimonial-section {
+	margin-top: 12.5rem;
+	margin-bottom: 12.5rem;
+	background-color: var(--BGCOLOR-TESTIMONIAL);
+
+	/* padding is too big 	padding: var(--PADDING-TESTIMONIAL-L-R); doesnt work */
+}
+
+/* --- SUBSCIBE SECTION */
+
+/* Cta styiling */
+.cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--BGCOLOR-CTA);
+
+	margin-top: 12.5rem;
+	margin-bottom: 10.62rem;
+	padding: 8.5rem;
+}
+
+.cta > h3 {
+	margin-bottom: 1.25rem;
+	text-align: center;
+}
+.cta > p {
+	margin-bottom: 3rem;
+	color: var(--HEADERS-FONT-COLOR);
+}
+
+.form {
+	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	gap: 5%;
+}
+
+.email-container {
+	background-color: var(--BGCOLOR);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2%;
+	width: 56%;
+	height: 5rem;
+}
+
+.email-container > input {
+	background-color: #f4f6fc;
+	border: none;
+	width: 80%;
+	border: 1px solid red;
+}
+
+.email-container > img {
+	width: 9.3%;
+	margin-left: 8%;
+}
+
+.btn--form {
+	width: 28%;
+	height: 5rem;
+	padding: 0;
+}
+
+/* FOOTER */
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 6.25rem;
+	/* width: 100%; */
+	border: 1px solid red;
+}
+
+.container {
+	border: 1px solid red;
+	max-width: 30%;
+}
+
+.container img {
+	width: 38%;
+	margin-bottom: 1.5rem;
+	border: 1px solid red;
+}
+
+.links {
+	border: 1px solid red;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 3.75rem;
+	min-height: 5.6rem;
+	width: 27.19%; /*  27.1875rem; */
+}
+
+.links a {
+	color: var(--FOOTER-LINK-COLOR);
+}
+
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
 @media screen and (max-width: 746px) {
 	h1,
@@ -383,6 +556,7 @@ li a:focus {
 	body {
 		padding: 1.5rem;
 	}
+
 	.header__container {
 		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
 	}
@@ -398,12 +572,55 @@ li a:focus {
 		flex-flow: column;
 		align-items: center;
 	}
+
+	.services-container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	.service-title {
+		/* so space between h5 and p is ok*/
+		min-height: 3rem;
+	}
 	/* --!!! why does it cause guy pic to disapear? : */
 	/* .hero-section {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
 	} */
+
+	/* --- CTA --- */
+	.cta {
+		padding: 7%;
+	}
+	.email-container {
+		width: 65%;
+	}
+	.btn--form {
+		width: 65%;
+	}
+	.form {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	/* FOOOTER */
+	.footer {
+		background-color: #a2d6f9;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.container img {
+		width: 4.28rem;
+	}
+
+	.links {
+		width: 60%;
+		column-gap: 5%;
+		row-gap: 10%;
+	}
 }
 
 /* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
