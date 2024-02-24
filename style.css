@@ -345,6 +345,10 @@ li a:focus {
 
 .project-image-box {
 	min-height: 15rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* height: 100%; */
 }
 .project-text-box {
 	border: 1px solid red;
@@ -361,24 +365,14 @@ li a:focus {
 
 .project-img-1 {
 	background-image: url("./project-assets/projects-section/1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	/* height: 100%; */
 }
 
 .project-img-2 {
 	background-image: url("./project-assets/projects-section/2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 }
 
 .project-img-3 {
 	background-image: url("./project-assets/projects-section/3.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 }
 
 /* applied headline regular class to Learn more */

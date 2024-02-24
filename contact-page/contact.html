@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>My website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header__container">
+
+            <!-- LOGO -->
+            <div class="header-circle-logo">
+                <img src="../project-assets/logos/circle.svg" alt="Circle logo">
+            </div>
+
+            <!-- CENTRAL NAVIGATION BAR -->
+            <nav class="header__nav">
+
+                <ul class="header__ul">
+
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li>
+                        <div class="menu-icon icon">&#9776;</div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- CONTACT BUTTON -->
+            <a class="header__button button" href="contact.html">Contact Us</a>
+
+        </div>
+    </header>
+
+    <!-- MAIN FORM -->
+    <section class="contact-us-section">
+
+        <h1 class="heading-contact-us">Contact Us</h1>
+
+        <div class="form-container">
+            <form name="myForm" action="" onsubmit="return validateForm()" method="post" required>
+
+                <div class="short-field">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="long-field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="long-field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone">
+                </div>
+
+                <div class="short-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="comment" placeholder="Write your message here..." rows="5"></textarea>
+                </div>
+
+
+                <div class="short-field">
+                    <input type="submit" id="submit-button" value="Submit">
+                </div>
+
+                <!-- .******************** -->
+
+
+
+
+
+
+
+            </form>
+        </div>
+    </section>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <!-- LOGO AND ADRESS  -->
+        <div class="container">
+            <img src="../project-assets/logos/circle.svg" alt="Circle logo">
+            <p class="headline-regular">
+                2972 Westheimer Rd. Santa Ana,
+                <br>Illinois 85486
+            </p>
+        </div>
+
+        <div class="links">
+            <!-- make a grid  -->
+            <div><a href="#">Team</a></div>
+            <div><a href="#">Services</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="#">Press</a></div>
+            <div><a href="#">Projects</a></div>
+            <div><a href="#">Privacy Policy</a></div>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="contact.js"></script>
+</body>
+
+</html>
