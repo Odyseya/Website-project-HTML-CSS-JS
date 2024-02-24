@@ -22,18 +22,6 @@
 	font-size: min(1.5rem, 6vw);
 }
 
-.project-img-4 {
-	background-image: url("../project-assets/projects-section/4.jpg");
-}
-
-.project-img-5 {
-	background-image: url("../project-assets/projects-section/5.jpg");
-}
-
-.project-img-6 {
-	background-image: url("../project-assets/projects-section/6.jpg");
-}
-
 .project-fullsize-img {
 	max-height: 27.75rem;
 	width: 100%;
