@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="contact.css">
 
 </head>
@@ -55,11 +55,11 @@
         <h1 class="heading-contact-us">Contact Us</h1>
 
         <div class="form-container">
-            <form action="">
+            <form name="myForm" action="" onsubmit="return validateForm()" method="post" required>
 
                 <div class="short-field">
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
                 </div>
 
                 <div class="long-field">
@@ -69,13 +69,14 @@
 
                 <div class="long-field">
                     <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" placeholder="Enter your phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone">
                 </div>
 
                 <div class="short-field">
                     <label for="message">Message</label>
                     <textarea id="message" name="comment" placeholder="Write your message here..." rows="5"></textarea>
                 </div>
+
 
                 <div class="short-field">
                     <input type="submit" id="submit-button" value="Submit">
