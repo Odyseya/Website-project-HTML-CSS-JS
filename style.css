@@ -340,8 +340,10 @@ li a:focus {
 	/* ensure that the content is inside a card  */
 	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
 	flex: 1;
-	max-width: 30%;
-	min-width: 255px;
+	/* max-width: 30%; */
+	max-width: calc(33% - 1.5rem);
+	min-width: 260px;
+	border: 1px solid red;
 }
 
 .project-image-box {
@@ -388,8 +390,8 @@ li a:focus {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	padding-bottom: 4rem;
 	gap: 2.5rem;
+	border: 1px solid red;
 }
 
 .services-card {
@@ -398,8 +400,7 @@ li a:focus {
 	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
 	display: flex;
 	flex-direction: column;
-
-	max-width: calc(33% - 2.5rem);
+	max-width: calc(33% - 1.5rem);
 	min-width: 280px;
 }
 
@@ -425,11 +426,9 @@ li a:focus {
 }
 
 .service-title {
-	/* to make p start at the same height */
-	min-height: 6rem;
+	/* so that all p start at the same height */
+	min-height: 4rem;
 }
-
-/* add media query for text, so it surely doesnt get out */
 
 /* ---TESTIMONIAL SECTION */
 
@@ -527,6 +526,8 @@ li a:focus {
 	margin-top: 12.5rem;
 	margin-bottom: 10.62rem;
 	padding: 8.5rem;
+	margin-left: -2rem;
+	margin-right: -2rem;
 }
 
 .cta > h3 {
@@ -634,17 +635,18 @@ li a:focus {
 		align-items: center;
 		padding-top: 10%;
 	}
-	.projects-container {
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-	}
 
-	.services-container {
+	/* .projects-container {
 		display: flex;
 		flex-flow: column;
 		align-items: center;
-	}
+	} */
+
+	/* .services-container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	} */
 	.service-title {
 		/* so space between h5 and p is ok*/
 		min-height: 3rem;
@@ -720,16 +722,15 @@ li a:focus {
 
 .headline-regular {
 	/* Headline/Regular */
-	/* font-size: 1.0625rem; do a */
+	font-size: 1.0625rem;
 	line-height: 150%; /* 1.59375rem */
 }
 
 .headline-medium {
 	/* Headline/Medium */
-	/* font-size: 1.0625rem; do a*/
-	/* buttons */
+	font-size: 1.0625rem;
 	font-weight: 500;
-	line-height: 130%; /* 1.38125rem */
+	line-height: 130%;
 }
 
 .caption-regular {
