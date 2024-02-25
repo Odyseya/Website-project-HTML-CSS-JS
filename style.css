@@ -227,6 +227,7 @@ li a:focus {
 	font-weight: 500;
 	line-height: 130%; /* 1.38125rem */
 	border: 1px solid red;
+	cursor: pointer;
 }
 
 .header__button {

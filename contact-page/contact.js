@@ -25,7 +25,7 @@ function validateForm() {
 	}
 	// only numeric characters
 	if (!/^\d+$/.test(phone)) {
-		alert("Phone must contain only numeric characters");
+		alert("Only numeric characters allowed in Phone field");
 		return false;
 	}
 
@@ -35,7 +35,7 @@ function validateForm() {
 	}
 
 	if (message.length < 30) {
-		alert("Message must have at least 30 words.");
+		alert("Message must have at least 30 letters.");
 		return false;
 	}
 
