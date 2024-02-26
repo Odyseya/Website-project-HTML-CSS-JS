@@ -13,7 +13,7 @@ View the deployed demo: [here](https://projectiron.netlify.app/)
 
 ## Features
 
--   **Form, Project and Contact pages**
+-   **Home, Project and Contact pages**
 -   **Navigation between the pages**
 -   **Responsive Web Design:** The project is designed to be responsive on various devices.
 -   **JavaScript Fetch API & Dynamic Pages:** Utilizes JavaScript Fetch API to fetch information dynamically for some sections.
