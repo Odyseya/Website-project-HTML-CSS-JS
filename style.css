@@ -5,17 +5,16 @@
 *::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* to have padding and border incl in width and height */
+	box-sizing: border-box;
 }
 
-/* Makes images easier to work with */
+/* images easier to work with and stay within their contanier */
 img {
-	display: block; /* removes space due to inline setting with text */
-	max-width: 100%; /* so that image doesnt overflow its container */
-	height: auto; /* because of added height in html to prevent layout shift */
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -27,58 +26,42 @@ select {
 
 :root {
 	/* FONTS */
+
 	font-size: 16px; /* to match figma settings */
+
 	--FF: "Roboto", sans-serif;
-	/* --FS: clamp(1.25rem, 2.2vh, 1.5rem); */
+	--FONT-COLOR: #6b708d;
+	--FONT-COLOR-BTN: #fff;
+	--FONT-COLOR-HEADERS: #292e47;
+	--FONT-COLOR-LINK-PRIMARY: #072ac8;
+	--FONT-COLOR-LINK-SECONDARY: #6b708d;
 
 	/* COLORS */
+
 	--BGCOLOR: #f4f6fc;
-	--BGCOLOR-TESTIMONIAL: #292e47;
-	--BGCOLOR-SERVICE-CARD: #ffffff;
-	--BGCOLOR-ICON: #ecf7ff;
-	--BGCOLOR-CTA: #ffc600;
-	/* --ALT-BGCOLOR:white; */
-	--BTN-COLOR: #072ac8;
-	--BTN-FONT-COLOR: #ffffff;
-	--HEADERS-FONT-COLOR: #292e47;
-	--FONT-COLOR: #6b708d;
-	--LINK-COLOR: #072ac8;
-	--FOOTER-LINK-COLOR: #6b708d;
+	--BGCOLOR-SERVICE-CARD: #fff;
+	--BGCOLOR-PROJECT-CARD: #fff;
+	--BGCOLOR-SUBSCRIBE-FORM: #ffc600;
+	--BGCOLOR-BTN: #072ac8;
 
-	--SECONDARY: #ffc600;
-	/* creation  to use on card*/
-	--BOX-SHADOW: 0 0 10px #292e47;
+	--NEUTRAL-LIGHT-BLUE: #ecf7ff;
 
-	/* --LINK-ACTIVE: ; */
+	/* EFFECTS */
+	--BOX-SHADOW: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
 
-	/* --- PADDING */
-	/* --PADDING-TOP-BOTTOM:; */
+	/* PADDING */
 	--PADDING-TESTIMONIAL-L-R: 0rem 3.75rem;
 	--PADDING-LEFT-RIGHT: 0rem 10.625rem;
-
-	/* --- MARGIN */
-	/* --MARGIN: clamp(1em,2.5vh,1.5em);  min,val,max */
 }
 
 /* --- UTILITY CLASSES */
 
-/* not to split certain words, trza dac je w span z ta clasa */
 .nowrawp {
 	white-space: nowrap;
-}
-/* to hide something from the screen */
-.offscreen {
-	position: absolute;
-	left: -10000px;
-}
-/* not applied yet */
-.center {
-	text-align: center;
 }
 
 /* --- GENERAL STYLES */
 
-/* makes scroll work smooth with elements */
 html {
 	scroll-behavior: smooth;
 	background-color: var(--BGCOLOR);
@@ -87,20 +70,19 @@ html {
 body {
 	background-color: var(--BGCOLOR);
 	color: var(--FONT-COLOR);
+	font: 1.25rem var(--FF);
+	font-weight: 400;
+
 	min-height: 100vh; /* Ensure full viewport height for vertical centering */
 	max-width: 90rem;
 	display: flex;
 	flex-direction: column; /* sets content from top to bottom on mobile */
 
-	font: 1.25rem var(--FF);
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal; /* 1.2 to 1.45em */
-
-	padding-top: 4.375em;
 	margin-inline: 0 auto;
 	padding: var(--PADDING-LEFT-RIGHT);
 	border: 1px solid blue;
+
+	/* padding-top: 4.375em; */
 }
 
 h1,
@@ -108,7 +90,7 @@ h2,
 h3,
 h4,
 h5 {
-	color: var(--HEADERS-FONT-COLOR);
+	color: var(--FONT-COLOR-HEADERS);
 }
 
 h1 {
@@ -130,7 +112,7 @@ h4 {
 }
 
 h5 {
-	/* Body/Medium/Intro - my H5  doesnt exist in figma */
+	/* Body/Medium/Intro */
 	font-size: 1.5rem;
 	font-weight: 500;
 }
@@ -138,10 +120,10 @@ h5 {
 a {
 	font-size: 1.0625rem;
 	text-decoration: none;
-	color: var(--LINK-COLOR);
 	display: inline-block;
+
+	color: var(--FONT-COLOR-LINK-PRIMARY);
 }
-/* a: :visited{ color:  }  potem moge dodac  */
 
 header {
 	position: sticky;
@@ -155,7 +137,6 @@ li {
 }
 
 li a {
-	/* display: block; full bottons clicabkle not just test */
 	border: 2px solid yellow;
 	display: inline-block;
 }
@@ -167,36 +148,32 @@ li a:visited {
 }
 
 li:first-child a {
-	color: var(--LINK-COLOR);
+	color: var(--FONT-COLOR-LINK-PRIMARY);
 }
 
 li a:hover,
 li a:focus {
 	cursor: pointer;
 	color: black;
-	/* background: can add */
 }
 
 /*  --- HEADER STYLES */
 
 .header__container {
 	display: flex;
-	flex-flow: row wrap;
 	align-items: center;
-	border: 2px solid red;
-	justify-content: space-between; /* na duzym ekranie rozstaw */
-}
+	justify-content: space-between;
+	gap: 3.75rem;
 
-.header__nav {
-	/* Headline/Medium COPY */
-	font-weight: 500;
-	line-height: 1.38125rem; /* 130% */
+	/* na duzym ekranie rozstaw */
+	/* flex-flow: row wrap; */
+
+	/* border: 2px solid red; */
 }
 
 .header__ul {
 	border: 2px solid black;
-	/* original display: inline-flex;  align-items: flex-start;  gap: 3.75rem; */
-	display: flex; /* to have menu as a row */
+	display: flex;
 	gap: 3.75rem;
 }
 
@@ -205,42 +182,31 @@ li a:focus {
 	border: 2px red solid;
 	min-width: 3.78294rem;
 	min-height: 1.15356rem;
-	/* flex-shrink: 0; */
-}
-
-.menu_icon {
-	/* fix */
-	/* display: none; */
 }
 
 .button {
+	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 0.625rem; /* nic nie zmienia?? */
-
-	background: var(--BTN-COLOR);
-	color: var(--BTN-FONT-COLOR);
-
 	text-align: center;
+
+	background: var(--BGCOLOR-BTN);
+	color: var(--FONT-COLOR-BTN);
+
 	/* headline-medium: */
 	font-weight: 500;
-	line-height: 130%; /* 1.38125rem */
+	line-height: 130%;
 	border: 1px solid red;
-	cursor: pointer;
 }
 
 .header__button {
+	max-height: 3.25rem;
+	max-width: 9.375rem; /* zmienilam na min */
 	padding: 0.9375em 2.25em;
-	/* width: 9.375rem; needed? robi sie wysoki*/
 }
 
 /* --- HERO SECTION */
-
-.hero__buttons {
-	display: inline-flex;
-	padding: 0.9375rem 2.3125rem;
-}
 
 .hero-section {
 	display: flex;
@@ -296,6 +262,11 @@ li a:focus {
 	margin-right: 5.94rem;
 }
 
+.hero__buttons {
+	display: inline-flex;
+	padding: 0.9375rem 2.3125rem;
+}
+
 /* --- LOGOS SECTION */
 
 .logos-section {
@@ -338,7 +309,7 @@ li a:focus {
 	min-height: 27.75rem;
 	overflow: hidden;
 	/* ensure that the content is inside a card  */
-	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--BOX-SHADOW);
 	flex: 1;
 	/* max-width: 30%; */
 	max-width: calc(33% - 1.5rem);
@@ -360,6 +331,7 @@ li a:focus {
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 46%;
+	background-color: var(--BGCOLOR-PROJECT-CARD);
 }
 
 .project-text-box p {
@@ -395,7 +367,7 @@ li a:focus {
 }
 
 .services-card {
-	box-shadow: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--BOX-SHADOW);
 	background-color: var(--BGCOLOR-SERVICE-CARD);
 	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
 	display: flex;
@@ -415,7 +387,7 @@ li a:focus {
 .circle {
 	width: 5rem;
 	height: 5rem;
-	background-color: var(--BGCOLOR-ICON);
+	background-color: var(--NEUTRAL-LIGHT-BLUE);
 	border-radius: 3.1rem;
 
 	/* centering iocn in cirle: */
@@ -440,7 +412,7 @@ li a:focus {
 	grid-auto-columns: 300px; */
 	margin-top: 12.5rem;
 	margin-bottom: 12.5rem;
-	background-color: var(--BGCOLOR-TESTIMONIAL);
+	background-color: #292e47;
 	border: 2px solid red;
 
 	/* responsive: */
@@ -488,7 +460,7 @@ li a:focus {
 
 .testimonal-quote {
 	line-height: 1.9rem;
-	color: var(--SECONDARY);
+	color: #ffc600;
 	padding: 1rem 0 0 0;
 }
 
@@ -521,14 +493,15 @@ li a:focus {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--BGCOLOR-CTA);
+	background-color: var(--BGCOLOR-SUBSCRIBE-FORM);
 
 	margin-top: 12.5rem;
 	margin-bottom: 10.62rem;
 	padding: 8.5rem;
-	margin-left: -2rem;
-	margin-right: -2rem;
 }
+/* margin-left: -2rem;
+	margin-right: -2rem;
+*/
 
 .cta > h3 {
 	margin-bottom: 1.25rem;
@@ -536,7 +509,7 @@ li a:focus {
 }
 .cta > p {
 	margin-bottom: 3rem;
-	color: var(--HEADERS-FONT-COLOR);
+	color: var(--FONT-COLOR-HEADERS);
 }
 
 .form {
@@ -611,7 +584,7 @@ li a:focus {
 }
 
 .links a {
-	color: var(--FOOTER-LINK-COLOR);
+	color: var(--FONT-COLOR-LINK-SECONDARY);
 }
 
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
@@ -626,13 +599,25 @@ li a:focus {
 	}
 
 	.header__container {
-		flex-flow: column wrap; /* wrap musi byc inaczej wychodzi all poza */
+		gap: 3%;
+		padding: 2% 0;
+		/* flex-flow: column wrap;  */
 	}
 
 	.header__ul {
 		flex-flow: column;
-		gap: 1rem; /* bo jest wieksza w */
-		align-items: center;
+		gap: 2%;
+		align-items: flex-start;
+	}
+	.header__button {
+		min-width: 4.375rem; /* zmienilam na min */
+		/* padding: 0.5375em 1.25em; */
+	}
+	/* padding: 5%; */
+	/* flex-flow: column;
+		gap: 1rem;  */
+	/* bo jest wieksza w */
+	/* align-items: center;
 		padding-top: 10%;
 	}
 
