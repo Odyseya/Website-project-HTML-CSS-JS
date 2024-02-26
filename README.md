@@ -27,7 +27,9 @@ and open the `index.html` file in your preferred web browser.
 
 ## Technologies and tools
 
--   HTML, CSS, JavaScript: The project is built using these core technologies.
+-   HTML
+-   CSS
+-   JavaScript
 -   GitHub: Version control and collaboration.
 -   Visual Studio Code (VSC): Code editor used for development.
 -   Netlify: Deployment platform.
@@ -55,4 +57,5 @@ JavaScript
 
 -   Ironhack student portal
 -   CSS Tutorial – Full Course for Beginners by Dave Gray - https://www.youtube.com/watch?v=OXGznpKZ_sA
+-   W3Schools - https://www.w3schools.com
 -   OpenAI - https://openai.com/blog/chatgpt
