@@ -586,7 +586,9 @@ li a:focus {
 		font-size: 1.9rem;
 	}
 	body {
-		padding: 1.5rem;
+		margin: 0;
+		padding: 0;
+		/* padding: 1.5rem; */
 	}
 
 	/* --- HEADER */
@@ -594,6 +596,7 @@ li a:focus {
 	.header__container {
 		gap: 6%;
 		padding: 3% 0;
+		background-color: rgb(207, 225, 236);
 	}
 
 	.header__ul {
@@ -614,7 +617,7 @@ li a:focus {
 
 	.hero-left-side-container {
 		margin-top: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 5rem;
 	}
 
 	.hero-left-side-container,
@@ -667,15 +670,18 @@ li a:focus {
 
 	.footer {
 		justify-content: center;
+		padding-bottom: 0;
 	}
 
 	.links {
 		margin-top: 20%;
+		background-color: rgb(207, 225, 236);
+		padding: 3%;
 	}
 
 	.container,
 	.links {
-		min-width: 90%;
+		width: 100%;
 	}
 
 	.container img {
@@ -683,7 +689,8 @@ li a:focus {
 	}
 }
 
-/* ********** MEDIUM AND LARGE  laptops, Desktops and rest *********** */
+/* --- MEDIUM AND LARGE  laptops, Desktops and rest *** */
+
 @media screen and (min-width: 747px) and (max-width: 1086px) {
 	h1,
 	h2 {
@@ -695,6 +702,55 @@ li a:focus {
 	}
 }
 
-/* ********** SYSTEM DARK MODE SETTINGS *********** */
+/* --- SYSTEM DARK MODE SETTINGS *********** */
+
 @media (prefers-color-scheme: dark) {
+	/* Default light mode colors */
+
+	:root {
+		--background-color: #121212;
+		--button-background-color: #424242;
+		--button-text-color: #ffffff;
+		--font-color: #ffffff;
+		--font-color-secondary: #b3b3b3;
+		--font-header: rgb(75, 71, 71);
+	}
+
+	body {
+		background-color: var(--background-color);
+		color: var(--font-color);
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: var(--font-header);
+	}
+
+	p {
+		color: var(--font-color-secondary);
+	}
+
+	button,
+	.button {
+		background-color: var(--button-background-color);
+		color: var(--button-text-color);
+	}
+
+	button:hover,
+	.button:hover {
+		background-color: black;
+	}
+	.caption,
+	.caption-regular,
+	.caption-regular-smallest {
+		color: var(--font-color-secondary);
+	}
+	.header__container,
+	.links {
+		background-color: var(--background-color);
+	}
+	.cta {
+		background-color: var(--BGCOLOR-SUBSCRIBE-FORM);
+	}
 }
