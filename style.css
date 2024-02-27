@@ -339,43 +339,40 @@ li a:focus {
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 2.5rem;
-	border: 1px solid red;
 }
 
 .services-card {
 	box-shadow: var(--BOX-SHADOW);
 	background-color: var(--BGCOLOR-SERVICE-CARD);
-	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
 	display: flex;
 	flex-direction: column;
 	max-width: calc(33% - 1.5rem);
 	min-width: 280px;
+	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
 }
 
 .services-text {
 	height: 75%;
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
 .circle {
+	background-color: var(--NEUTRAL-LIGHT-BLUE);
 	width: 5rem;
 	height: 5rem;
-	background-color: var(--NEUTRAL-LIGHT-BLUE);
 	border-radius: 3.1rem;
+	margin-bottom: 1rem;
 
-	/* centering iocn in cirle: */
+	/* centering icon in cirle: */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 1rem;
 }
 
 .service-title {
-	/* so that all p start at the same height */
-	min-height: 4rem;
+	min-height: 4rem; /* so that all p start at the same height */
 }
 
 /* ---TESTIMONIAL SECTION */
@@ -628,9 +625,14 @@ li a:focus {
 		margin: 1rem auto;
 	}
 
+	/* --- SERVICES */
+
 	.service-title {
-		/* so space between h5 and p is ok*/
-		min-height: 3rem;
+		min-height: 3rem; /* so space between h5 and p is ok*/
+	}
+
+	.services-text P {
+		margin: 1rem 0;
 	}
 
 	/* --- CTA --- */
