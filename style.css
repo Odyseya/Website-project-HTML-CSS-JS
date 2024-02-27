@@ -8,9 +8,8 @@
 	box-sizing: border-box;
 }
 
-/* images to stay within their contanier */
-
 img {
+	/* images to stay within their contanier */
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -78,7 +77,6 @@ body {
 	display: flex;
 	flex-direction: column; /* sets content from top to bottom on mobile */
 	padding: var(--PADDING-LEFT-RIGHT);
-	/* min-height: 100vh;  */ /* Ensure full viewport height for vertical centering */
 }
 
 h1,
@@ -118,13 +116,13 @@ h5 {
 .body-regular-intro {
 	/* Body/Regular */
 	font-size: 1.25rem;
-	line-height: 150%; /* 1.875rem */
+	line-height: 150%;
 }
 
 .headline-regular {
 	/* Headline/Regular */
 	font-size: 1.0625rem;
-	line-height: 150%; /* 1.59375rem */
+	line-height: 150%;
 }
 
 .headline-medium {
@@ -179,6 +177,8 @@ li a:hover,
 li a:focus {
 	cursor: pointer;
 	color: black;
+	transform: scale(1.25);
+	transition: transform 0.3s ease;
 }
 
 /*  --- HEADER STYLES */
@@ -212,6 +212,12 @@ li a:focus {
 
 	font-weight: 500;
 	line-height: 130%;
+}
+
+.button:hover {
+	background-color: #194379;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header__button {
@@ -304,6 +310,11 @@ li a:focus {
 	padding: 0.5rem;
 }
 
+.logo:hover {
+	transform: scale(1.25);
+	transition: transform 0.3s ease;
+}
+
 /* --- PROJECTS SECTION */
 
 .recent-projects-heading {
@@ -317,6 +328,10 @@ li a:focus {
 	gap: 2.5rem;
 }
 
+.project-card:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
 .project-card {
 	min-height: 27.75rem;
 	flex: 1;
@@ -454,6 +469,11 @@ li a:focus {
 	max-width: calc(33% - 1.5rem);
 	min-width: 280px;
 	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
+}
+
+.services-card:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
 }
 
 .services-text {
