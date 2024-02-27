@@ -182,6 +182,7 @@ li a:focus {
 
 	font-weight: 500;
 	line-height: 130%;
+	border: none;
 }
 
 .header__button {
@@ -328,53 +329,6 @@ li a:focus {
 	background-image: url("./project-assets/projects-section/3.jpg");
 } */
 
-/* ---SERVICES SECTION */
-
-.services-section-heading {
-	margin-bottom: 4.38rem;
-}
-
-.services-container {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	gap: 2.5rem;
-}
-
-.services-card {
-	box-shadow: var(--BOX-SHADOW);
-	background-color: var(--BGCOLOR-SERVICE-CARD);
-	display: flex;
-	flex-direction: column;
-	max-width: calc(33% - 1.5rem);
-	min-width: 280px;
-	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
-}
-
-.services-text {
-	height: 75%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.circle {
-	background-color: var(--NEUTRAL-LIGHT-BLUE);
-	width: 5rem;
-	height: 5rem;
-	border-radius: 3.1rem;
-	margin-bottom: 1rem;
-
-	/* centering icon in cirle: */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.service-title {
-	min-height: 4rem; /* so that all p start at the same height */
-}
-
 /* ---TESTIMONIAL SECTION */
 
 .testimonial-section {
@@ -450,40 +404,82 @@ li a:focus {
 	color: #f4f6fc;
 }
 
+/* ---SERVICES SECTION */
+
+.services-section-heading {
+	margin-bottom: 4.38rem;
+}
+
+.services-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 2.5rem;
+}
+
+.services-card {
+	box-shadow: var(--BOX-SHADOW);
+	background-color: var(--BGCOLOR-SERVICE-CARD);
+	display: flex;
+	flex-direction: column;
+	max-width: calc(33% - 1.5rem);
+	min-width: 280px;
+	padding: 2.5rem 1.88rem 1.88rem 1.88rem;
+}
+
+.services-text {
+	height: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.circle {
+	background-color: var(--NEUTRAL-LIGHT-BLUE);
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3.1rem;
+	margin-bottom: 1rem;
+
+	/* centering icon in cirle: */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.service-title {
+	min-height: 4rem; /* so that all p start at the same height */
+}
+
 /* --- SUBSCIBE SECTION */
 
 .cta {
+	background-color: var(--BGCOLOR-SUBSCRIBE-FORM);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--BGCOLOR-SUBSCRIBE-FORM);
 
 	margin-top: 12.5rem;
 	margin-bottom: 10.62rem;
 	padding: 8.5rem;
 }
-/* margin-left: -2rem;
-	margin-right: -2rem;
-*/
 
 .cta > h3 {
-	margin-bottom: 1.25rem;
 	text-align: center;
+	margin-bottom: 1.25rem;
 }
 .cta > p {
-	margin-bottom: 3rem;
 	color: var(--FONT-COLOR-HEADERS);
+	margin-bottom: 3rem;
 }
 
 .form {
-	border: 1px solid red;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-
 	gap: 5%;
+	width: 100%;
 }
 
 .email-container {
@@ -501,7 +497,6 @@ li a:focus {
 	background-color: #f4f6fc;
 	border: none;
 	width: 80%;
-	border: 1px solid red;
 }
 
 .email-container > img {
@@ -519,23 +514,16 @@ li a:focus {
 
 .footer {
 	display: flex;
-	/* justify-content: space-around; */
-	align-items: end;
-	padding-bottom: 6.25rem;
-	/* width: 100%; */
-	border: 1px solid red;
-
-	justify-content: space-between;
 	flex-wrap: wrap;
+	align-items: end;
+	justify-content: space-between;
+	padding-bottom: 6.25rem;
 }
 
 .container {
-	border: 1px solid red;
-
 	max-width: 47%;
 	min-width: 35%;
 	flex: 1;
-	/* Take up the available space */
 }
 
 .container img {
@@ -558,6 +546,7 @@ li a:focus {
 }
 
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
+
 @media screen and (max-width: 746px) {
 	h1,
 	h2,
@@ -628,8 +617,8 @@ li a:focus {
 	/* TESTIMONIAL */
 
 	.testimonial-section {
-		margin-top: 20%;
-		margin-bottom: 20%;
+		margin-top: 8rem;
+		margin-bottom: 8rem;
 	}
 	/* --- CTA --- */
 	.cta {
