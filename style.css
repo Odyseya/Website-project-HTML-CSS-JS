@@ -21,6 +21,7 @@ button,
 textarea,
 select {
 	font: inherit;
+	border: none;
 }
 
 /* --- VARIABLES */
@@ -112,6 +113,36 @@ h5 {
 	font-weight: 500;
 }
 
+/* --- as per figma data */
+
+.body-regular-intro {
+	/* Body/Regular */
+	font-size: 1.25rem;
+	line-height: 150%; /* 1.875rem */
+}
+
+.headline-regular {
+	/* Headline/Regular */
+	font-size: 1.0625rem;
+	line-height: 150%; /* 1.59375rem */
+}
+
+.headline-medium {
+	/* Headline/Medium */
+	font-size: 1.0625rem;
+	font-weight: 500;
+	line-height: 130%;
+}
+
+.caption-regular {
+	/* Caption/1 */
+	font-size: 0.9375rem;
+}
+.caption-regular-smallest {
+	/* Caption/2 */
+	font-size: 0.8125rem;
+}
+
 a {
 	font-size: 1.0625rem;
 	text-decoration: none;
@@ -160,7 +191,6 @@ li a:focus {
 }
 
 .header__ul {
-	border: 2px solid black;
 	display: flex;
 	gap: 3.75rem;
 }
@@ -182,7 +212,6 @@ li a:focus {
 
 	font-weight: 500;
 	line-height: 130%;
-	border: none;
 }
 
 .header__button {
@@ -499,7 +528,6 @@ li a:focus {
 
 .email-container > input {
 	background-color: #f4f6fc;
-	border: none;
 	width: 80%;
 }
 
@@ -561,16 +589,19 @@ li a:focus {
 		padding: 1.5rem;
 	}
 
+	/* --- HEADER */
+
 	.header__container {
-		gap: 3%;
-		padding: 2% 0;
+		gap: 6%;
+		padding: 3% 0;
 	}
 
 	.header__ul {
 		flex-flow: column;
-		gap: 2%;
+		gap: 0.5rem;
 		align-items: flex-start;
 	}
+
 	.header__button {
 		min-width: 4.375rem;
 	}
@@ -633,6 +664,7 @@ li a:focus {
 	}
 
 	/* FOOOTER */
+
 	.footer {
 		justify-content: center;
 	}
@@ -663,40 +695,6 @@ li a:focus {
 	}
 }
 
-/* ********** MOBILE DEVICE LANDSCAPE *********** */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-}
-
 /* ********** SYSTEM DARK MODE SETTINGS *********** */
 @media (prefers-color-scheme: dark) {
-}
-
-/* --- as per figma data */
-
-.body-regular-intro {
-	/* Body/Regular */
-	font-size: 1.25rem;
-	line-height: 150%; /* 1.875rem */
-}
-
-.headline-regular {
-	/* Headline/Regular */
-	font-size: 1.0625rem;
-	line-height: 150%; /* 1.59375rem */
-}
-
-.headline-medium {
-	/* Headline/Medium */
-	font-size: 1.0625rem;
-	font-weight: 500;
-	line-height: 130%;
-}
-
-.caption-regular {
-	/* Caption/1 */
-	font-size: 0.9375rem;
-}
-.caption-regular-smallest {
-	/* Caption/2 */
-	font-size: 0.8125rem;
 }
