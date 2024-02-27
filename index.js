@@ -1,9 +1,13 @@
 async function fetchAllProjects() {
-	const response = await fetch(
-		"https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
-	);
-	const data = await response.json();
-	return data;
+	try {
+		const response = await fetch(
+			"https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
+		);
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Error fetching projects", error);
+	}
 }
 
 function getRecentProjects(projects) {
@@ -47,7 +51,11 @@ function showRecentProjectsData(recentProjects) {
 }
 
 window.onload = async () => {
-	const projects = await fetchAllProjects();
-	const recentProjects = getRecentProjects(projects);
-	showRecentProjectsData(recentProjects);
+	try {
+		const projects = await fetchAllProjects();
+		const recentProjects = getRecentProjects(projects);
+		showRecentProjectsData(recentProjects);
+	} catch (error) {
+		console.error("Error loading project data", error);
+	}
 };
