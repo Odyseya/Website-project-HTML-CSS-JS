@@ -8,7 +8,8 @@
 	box-sizing: border-box;
 }
 
-/* images easier to work with and stay within their contanier */
+/* images to stay within their contanier */
+
 img {
 	display: block;
 	max-width: 100%;
@@ -50,7 +51,6 @@ select {
 	--BOX-SHADOW: 0px 38.776px 77.551px 0px rgba(0, 0, 0, 0.1);
 
 	/* PADDING */
-	--PADDING-TESTIMONIAL-L-R: 0rem 3.75rem;
 	--PADDING-LEFT-RIGHT: 0rem 10.625rem;
 }
 
@@ -72,17 +72,12 @@ body {
 	color: var(--FONT-COLOR);
 	font: 1.25rem var(--FF);
 	font-weight: 400;
-
-	min-height: 100vh; /* Ensure full viewport height for vertical centering */
+	margin-inline: 0 auto;
 	max-width: 90rem;
 	display: flex;
 	flex-direction: column; /* sets content from top to bottom on mobile */
-
-	margin-inline: 0 auto;
 	padding: var(--PADDING-LEFT-RIGHT);
-	border: 1px solid blue;
-
-	/* padding-top: 4.375em; */
+	/* min-height: 100vh;  */ /* Ensure full viewport height for vertical centering */
 }
 
 h1,
@@ -121,7 +116,6 @@ a {
 	font-size: 1.0625rem;
 	text-decoration: none;
 	display: inline-block;
-
 	color: var(--FONT-COLOR-LINK-PRIMARY);
 }
 
@@ -137,7 +131,6 @@ li {
 }
 
 li a {
-	border: 2px solid yellow;
 	display: inline-block;
 }
 
@@ -164,11 +157,6 @@ li a:focus {
 	align-items: center;
 	justify-content: space-between;
 	gap: 3.75rem;
-
-	/* na duzym ekranie rozstaw */
-	/* flex-flow: row wrap; */
-
-	/* border: 2px solid red; */
 }
 
 .header__ul {
@@ -177,9 +165,7 @@ li a:focus {
 	gap: 3.75rem;
 }
 
-/* neeeded? */
 .header-circle-logo img {
-	border: 2px red solid;
 	min-width: 3.78294rem;
 	min-height: 1.15356rem;
 }
@@ -194,15 +180,13 @@ li a:focus {
 	background: var(--BGCOLOR-BTN);
 	color: var(--FONT-COLOR-BTN);
 
-	/* headline-medium: */
 	font-weight: 500;
 	line-height: 130%;
-	border: 1px solid red;
 }
 
 .header__button {
 	max-height: 3.25rem;
-	max-width: 9.375rem; /* zmienilam na min */
+	max-width: 9.375rem;
 	padding: 0.9375em 2.25em;
 }
 
@@ -211,20 +195,13 @@ li a:focus {
 .hero-section {
 	display: flex;
 	flex-flow: row wrap;
-	/* flex-direction: row-reverse; */
-	margin-top: 6.25rem;
-	/* height: auto; */
-	border: 1px solid red;
-
 	align-items: center;
 	justify-content: center;
+	margin-top: 6.25rem;
 }
 
 .hero-left-side-container,
 .hero-right-side-container {
-	/* width: 50%; */
-	/* min-width: 20rem; */
-
 	flex: 1;
 }
 
@@ -232,48 +209,24 @@ li a:focus {
 	background-image: url("./project-assets/hero-section/hero-image.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	border: 1px solid blue;
 	position: relative;
 	background-size: contain;
-	/* min-height: 21rem; */
-
-	min-height: 650px;
-	/* min musi byc, jak max to 0 */
+	min-height: 650px; /* so that background pciture is visible */
 }
 
 .hero-left-side-container {
 	margin-top: 4rem;
 	margin-bottom: 3rem;
-
-	/* display: flex;
-	flex-direction: column;
-	justify-content: center; */
-	/* border: 1px solid green;*/
 }
-
-/* .item {
-	flex: 1; } */
-/* This will make the items grow and shrink equally */
-/* You can also use flex: 0 0 auto; to prevent them from growing or shrinking */
-/* flex: 0 1 auto; would allow them to shrink but not grow */
-
-/* to fix, pic is resizing not in sync */
 
 .hero__card-icon,
 .hero__accepted-icon {
 	position: absolute;
 	width: 18rem;
 	height: auto; /* Maintain aspect ratio */
-	/* margin: 0;
-	padding: 0; */
 }
 
 .hero__card-icon {
-	/* width: 70%;
-	top: 0px; */
-	/* top: -1.5rem;
-	left: -4.5rem; */
-
 	margin-top: -1rem;
 	margin-left: -4.5rem;
 	top: 0;
@@ -281,11 +234,6 @@ li a:focus {
 }
 
 .hero__accepted-icon {
-	/* top: 60%; */
-	/* left: 48%;*/
-
-	/* width: 68%; */
-
 	margin-bottom: -6rem;
 	margin-right: -4rem;
 	bottom: 0;
@@ -293,7 +241,6 @@ li a:focus {
 }
 
 .hero-paragraph {
-	/* margin-right: 5.94rem; */
 	max-width: 90%;
 	margin-top: 1rem;
 	margin-bottom: 2.5rem;
@@ -312,11 +259,9 @@ li a:focus {
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
-	filter: grayscale(1);
 	margin-top: 8.12rem;
 	margin-bottom: 12.5rem;
-
-	border: 1px solid red;
+	filter: grayscale(1);
 }
 
 .logos-section:hover {
@@ -344,14 +289,11 @@ li a:focus {
 
 .project-card {
 	min-height: 27.75rem;
-	overflow: hidden;
-	/* ensure that the content is inside a card  */
-	box-shadow: var(--BOX-SHADOW);
 	flex: 1;
-	/* max-width: 30%; */
 	max-width: calc(33% - 1.5rem);
 	min-width: 260px;
-	border: 1px solid red;
+	overflow: hidden; /* ensure that the content is inside a card  */
+	box-shadow: var(--BOX-SHADOW);
 }
 
 .project-image-box {
@@ -359,15 +301,14 @@ li a:focus {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	/* height: 100%; */
 }
+
 .project-text-box {
-	border: 1px solid red;
-	padding: 1.88rem;
+	min-height: 46%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 46%;
+	padding: 1.88rem;
 	background-color: var(--BGCOLOR-PROJECT-CARD);
 }
 
@@ -375,7 +316,7 @@ li a:focus {
 	margin-bottom: 1rem;
 }
 
-.project-img-1 {
+/* .project-img-1 {
 	background-image: url("./project-assets/projects-section/1.jpg");
 }
 
@@ -385,7 +326,7 @@ li a:focus {
 
 .project-img-3 {
 	background-image: url("./project-assets/projects-section/3.jpg");
-}
+} */
 
 /* ---SERVICES SECTION */
 
