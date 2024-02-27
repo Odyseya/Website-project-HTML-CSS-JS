@@ -177,6 +177,10 @@ li a:hover,
 li a:focus {
 	cursor: pointer;
 	color: black;
+}
+
+li a:hover,
+footer a:hover {
 	transform: scale(1.25);
 	transition: transform 0.3s ease;
 }
