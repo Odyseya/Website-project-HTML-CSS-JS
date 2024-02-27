@@ -636,14 +636,18 @@ li a:focus {
 	.footer {
 		justify-content: center;
 	}
+
 	.links {
-		margin-top: 5%;
+		margin-top: 20%;
 	}
-	.container img {
-		width: 4.28rem;
-	}
-	.container {
+
+	.container,
+	.links {
 		min-width: 90%;
+	}
+
+	.container img {
+		width: 5.5rem;
 	}
 }
 
