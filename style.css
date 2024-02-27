@@ -210,56 +210,93 @@ li a:focus {
 
 .hero-section {
 	display: flex;
-	flex-direction: row-reverse;
+	flex-flow: row wrap;
+	/* flex-direction: row-reverse; */
 	margin-top: 6.25rem;
 	/* height: auto; */
 	border: 1px solid red;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-left-side-container,
+.hero-right-side-container {
+	/* width: 50%; */
+	/* min-width: 20rem; */
+
+	flex: 1;
 }
 
 .hero-right-side-container {
-	width: 50%;
-	position: relative;
 	background-image: url("./project-assets/hero-section/hero-image.png");
 	background-repeat: no-repeat;
-	background-size: contain;
 	background-position: center;
 	border: 1px solid blue;
-}
+	position: relative;
+	background-size: contain;
+	/* min-height: 21rem; */
 
-.item {
-	flex: 1; /* This will make the items grow and shrink equally */
-	/* You can also use flex: 0 0 auto; to prevent them from growing or shrinking */
-	/* flex: 0 1 auto; would allow them to shrink but not grow */
-}
-/* to fix, pic is resizing not in sync */
-.hero__card-icon {
-	position: absolute;
-	width: 70%;
-	height: auto; /* Maintain aspect ratio */
-	top: -1.5rem;
-	left: -4.5rem;
-}
-
-.hero__accepted-icon {
-	position: absolute;
-	top: 60%;
-	left: 48%;
-	width: 65%;
-	height: auto; /* Maintain aspect ratio */
+	min-height: 650px;
+	/* min musi byc, jak max to 0 */
 }
 
 .hero-left-side-container {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border: 1px solid green;
 	margin-top: 4rem;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
+
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center; */
+	/* border: 1px solid green;*/
+}
+
+/* .item {
+	flex: 1; } */
+/* This will make the items grow and shrink equally */
+/* You can also use flex: 0 0 auto; to prevent them from growing or shrinking */
+/* flex: 0 1 auto; would allow them to shrink but not grow */
+
+/* to fix, pic is resizing not in sync */
+
+.hero__card-icon,
+.hero__accepted-icon {
+	position: absolute;
+	width: 18rem;
+	height: auto; /* Maintain aspect ratio */
+	/* margin: 0;
+	padding: 0; */
+}
+
+.hero__card-icon {
+	/* width: 70%;
+	top: 0px; */
+	/* top: -1.5rem;
+	left: -4.5rem; */
+
+	margin-top: -1rem;
+	margin-left: -4.5rem;
+	top: 0;
+	left: 0;
+}
+
+.hero__accepted-icon {
+	/* top: 60%; */
+	/* left: 48%;*/
+
+	/* width: 68%; */
+
+	margin-bottom: -6rem;
+	margin-right: -4rem;
+	bottom: 0;
+	right: 0;
 }
 
 .hero-paragraph {
-	margin-right: 5.94rem;
+	/* margin-right: 5.94rem; */
+	max-width: 90%;
+	margin-top: 1rem;
+	margin-bottom: 2.5rem;
 }
 
 .hero__buttons {
@@ -349,8 +386,6 @@ li a:focus {
 .project-img-3 {
 	background-image: url("./project-assets/projects-section/3.jpg");
 }
-
-/* applied headline regular class to Learn more */
 
 /* ---SERVICES SECTION */
 
@@ -555,36 +590,42 @@ li a:focus {
 
 .footer {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	/* justify-content: space-around; */
+	align-items: end;
 	padding-bottom: 6.25rem;
 	/* width: 100%; */
 	border: 1px solid red;
+
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .container {
 	border: 1px solid red;
-	max-width: 30%;
+
+	max-width: 47%;
+	min-width: 35%;
+	flex: 1;
+	/* Take up the available space */
 }
 
 .container img {
 	width: 38%;
 	margin-bottom: 1.5rem;
-	border: 1px solid red;
+	max-width: 6.14881rem;
 }
 
 .links {
-	border: 1px solid red;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr 1fr;
-	row-gap: 3.75rem;
-	min-height: 5.6rem;
-	width: 27.19%; /*  27.1875rem; */
+	grid-gap: 3.75rem 1.5rem;
+	padding-left: 3%;
 }
 
 .links a {
 	color: var(--FONT-COLOR-LINK-SECONDARY);
+	white-space: nowrap;
 }
 
 /* ********** SMALL MOBILE, iPads, Tablets *********** */
@@ -613,35 +654,43 @@ li a:focus {
 		min-width: 4.375rem; /* zmienilam na min */
 		/* padding: 0.5375em 1.25em; */
 	}
-	/* padding: 5%; */
-	/* flex-flow: column;
-		gap: 1rem;  */
-	/* bo jest wieksza w */
-	/* align-items: center;
-		padding-top: 10%;
+
+	/* HERO SECTION */
+
+	.hero-section {
+		flex-direction: column;
 	}
 
-	/* .projects-container {
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-	} */
+	.hero-left-side-container {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		/* max-width: 100vw; */
+	}
 
-	/* .services-container {
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-	} */
+	.hero-left-side-container,
+	.hero-right-side-container {
+		width: 100%;
+		/* max-width: 10px; */
+
+		flex: none;
+		text-align: center;
+		/*  ensure that these containers do not grow or shrink to fit the available space */
+	}
+
+	/* .hero-right-side-container {
+		min-height: 17rem;
+		background-position: center;
+		background-size: contain;
+	}
+ */
+	.hero-left-side-container > p {
+		margin: 1rem auto;
+	}
+
 	.service-title {
 		/* so space between h5 and p is ok*/
 		min-height: 3rem;
 	}
-	/* --!!! why does it cause guy pic to disapear? : */
-	/* .hero-section {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-	} */
 
 	/* --- CTA --- */
 	.cta {
@@ -660,20 +709,16 @@ li a:focus {
 
 	/* FOOOTER */
 	.footer {
-		background-color: #a2d6f9;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
+		justify-content: center;
 	}
-
+	.links {
+		margin-top: 5%;
+	}
 	.container img {
 		width: 4.28rem;
 	}
-
-	.links {
-		width: 60%;
-		column-gap: 5%;
-		row-gap: 10%;
+	.container {
+		min-width: 90%;
 	}
 }
 
