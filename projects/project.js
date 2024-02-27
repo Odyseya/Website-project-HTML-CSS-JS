@@ -5,11 +5,15 @@ function getProjectIdFromURL() {
 }
 
 async function fetchAllProjects() {
-	const response = await fetch(
-		"https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
-	);
-	const data = await response.json();
-	return data;
+	try {
+		const response = await fetch(
+			"https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
+		);
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Something went wrong!", error);
+	}
 }
 
 function showProjectData(project) {
@@ -72,10 +76,14 @@ function getOtherProjects(projects, id) {
 }
 
 window.onload = async () => {
-	const id = getProjectIdFromURL();
-	const projects = await fetchAllProjects();
-	const projectToShow = projects.find((project) => project.uuid === id);
-	showProjectData(projectToShow);
-	const otherProjects = getOtherProjects(projects, id);
-	showOtherProjectData(otherProjects);
+	try {
+		const id = getProjectIdFromURL();
+		const projects = await fetchAllProjects();
+		const projectToShow = projects.find((project) => project.uuid === id);
+		showProjectData(projectToShow);
+		const otherProjects = getOtherProjects(projects, id);
+		showOtherProjectData(otherProjects);
+	} catch (error) {
+		console.error("Error loading project data:", error);
+	}
 };
