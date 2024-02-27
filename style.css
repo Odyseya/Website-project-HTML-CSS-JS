@@ -378,16 +378,12 @@ li a:focus {
 /* ---TESTIMONIAL SECTION */
 
 .testimonial-section {
+	background-color: #292e47;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	/* grid-auto-rows: 300px;
-	grid-auto-columns: 300px; */
 	margin-top: 12.5rem;
 	margin-bottom: 12.5rem;
-	background-color: #292e47;
-	border: 2px solid red;
-
 	/* responsive: */
 	min-height: 38.875rem;
 }
@@ -400,28 +396,23 @@ li a:focus {
 }
 
 .emoji {
-	/* width: 150px;
-	height: 150px; */
-
+	place-self: center;
 	/* responsive: */
 	width: 50%;
 	height: auto;
 	min-width: 80px;
-
-	place-self: center;
 }
 
 .testimonial-box {
-	border: 1px solid pink;
 	display: grid;
 	align-items: center;
 	justify-content: center;
 }
 
 .text {
+	display: grid;
 	grid-column: 2/3;
 	grid-row: 1/3;
-	display: grid;
 	place-content: space-evenly center;
 	text-align: center;
 }
@@ -439,8 +430,8 @@ li a:focus {
 
 .client-info-container {
 	display: flex;
-	gap: 0.62rem;
 	justify-content: center;
+	gap: 0.62rem;
 	padding: 1rem 0;
 }
 
