@@ -625,7 +625,12 @@ li a:focus {
 	.services-text P {
 		margin: 1rem 0;
 	}
+	/* TESTIMONIAL */
 
+	.testimonial-section {
+		margin-top: 20%;
+		margin-bottom: 20%;
+	}
 	/* --- CTA --- */
 	.cta {
 		padding: 7%;
