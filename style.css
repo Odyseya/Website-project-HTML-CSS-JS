@@ -56,7 +56,7 @@ select {
 
 /* --- UTILITY CLASSES */
 
-.nowrawp {
+.nowrap {
 	white-space: nowrap;
 }
 
@@ -252,6 +252,7 @@ footer a:hover {
 	position: relative;
 	background-size: contain;
 	min-height: 650px; /* so that background pciture is visible */
+	overflow: clip;
 }
 
 .hero-left-side-container {
@@ -610,9 +611,8 @@ footer a:hover {
 		font-size: 1.9rem;
 	}
 	body {
-		margin: 0;
+		margin: 0 0 0 0;
 		padding: 0;
-		/* padding: 1.5rem; */
 	}
 
 	/* --- HEADER */
@@ -621,6 +621,7 @@ footer a:hover {
 		gap: 6%;
 		padding: 3% 0;
 		background-color: rgb(207, 225, 236);
+		padding-left: 1rem;
 	}
 
 	.header__ul {
@@ -642,23 +643,26 @@ footer a:hover {
 	.hero-left-side-container {
 		margin-top: 1rem;
 		margin-bottom: 5rem;
+		text-align: left;
+		padding-left: 15px;
 	}
 
 	.hero-left-side-container,
 	.hero-right-side-container {
 		width: 100%;
 		flex: none;
-		text-align: center;
-	}
-
-	.hero-left-side-container > p {
-		margin: 1rem auto;
 	}
 
 	/* --- LOGO SECTION  */
 
 	.logos-section {
 		margin-bottom: 8rem;
+	}
+
+	/* --- RECENT PROJECTS */
+
+	.recent-projects-heading {
+		padding-left: 17px;
 	}
 
 	/* TESTIMONIAL */
@@ -669,6 +673,9 @@ footer a:hover {
 	}
 
 	/* --- SERVICES */
+	.services-section-heading {
+		padding-left: 17px;
+	}
 
 	.service-title {
 		min-height: 3rem; /* so space between h5 and p is ok*/
@@ -677,7 +684,7 @@ footer a:hover {
 	/* --- SUBSRIBE FORM --- */
 
 	.cta {
-		padding: 25% 5%;
+		padding: 25% 5% 15% 5%;
 	}
 
 	.email-container,
@@ -693,12 +700,11 @@ footer a:hover {
 	/* FOOOTER */
 
 	.footer {
-		justify-content: center;
 		padding-bottom: 0;
 	}
 
 	.links {
-		margin-top: 20%;
+		margin-top: 15%;
 		background-color: rgb(207, 225, 236);
 		padding: 3%;
 	}
@@ -708,6 +714,10 @@ footer a:hover {
 		width: 100%;
 	}
 
+	.container {
+		padding-left: 20px;
+		max-width: 60%;
+	}
 	.container img {
 		width: 5.5rem;
 	}
@@ -722,6 +732,7 @@ footer a:hover {
 	}
 
 	body {
+		margin: 0 0 0 0;
 		padding: 3rem;
 	}
 }
