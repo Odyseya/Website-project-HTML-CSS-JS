@@ -29,6 +29,16 @@
 	margin-bottom: 4.37rem;
 }
 
-.project > p {
+.project-details > p {
 	font-size: min(1.25rem, 6vw);
+	padding-left: 1rem;
+}
+
+@media screen and (max-width: 746px) {
+	.project {
+		padding: 0 5%;
+	}
+	.project-description > p {
+		font-size: 1rem;
+	}
 }
